@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MKNFirstViewController : UIViewController
-
+@interface MKNFirstViewController : UITableViewController
 @end
