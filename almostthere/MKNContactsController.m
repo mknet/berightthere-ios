@@ -1,23 +1,30 @@
 //
-//  MKNFirstViewController.m
+//  MKNContactsController.m
 //  almostthere
 //
 //  Created by Marcel Koch on 26.05.14.
 //  Copyright (c) 2014 Marcel Koch. All rights reserved.
 //
 
-#import "MKNFirstViewController.h"
+#import "MKNContactsController.h"
+#import "MKNAppDelegate.h"
+
 #import <RHAddressBook/AddressBook.h>
 
-@interface MKNFirstViewController ()
+@interface MKNContactsController ()
 
 @property (strong) NSMutableArray *favourites;
 @property (strong) RHAddressBook *ab;
 @property (strong) NSArray *contacts;
 
+@property (strong) CLLocationManager *locationManager;
+@property (strong) CLRegion *testRegion;
+
+@property (strong) MKNGeoFenceManager *manager;
+
 @end
 
-@implementation MKNFirstViewController
+@implementation MKNContactsController
 
 - (void)awakeFromNib
 {
@@ -118,16 +125,64 @@
  }
  */
 
-/*
+
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
  {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+     if ([[segue identifier] isEqualToString:@"writeMessage"]) {
+         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+         RHPerson *person = self.contacts[indexPath.row];
+         
+         //TODO Extract address extraction code
+         
+         RHMultiValue *mv = [person addresses];
+         NSDictionary *firstAddress = [mv valueAtIndex:0];
+         
+         NSString *addressString = [NSString stringWithFormat:@"%@ %@",
+                                    [firstAddress objectForKey:@"Street"],
+                                    [firstAddress objectForKey:@"City"],
+                                    [firstAddress objectForKey:@"Country"]
+                                    ];
+         
+         CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
 
+         
+         MKNAppDelegate *appDelegate = (MKNAppDelegate *)[[UIApplication sharedApplication] delegate];
+         
+         [geoCoder geocodeAddressString:addressString completionHandler:^(NSArray *placemarks, NSError *error) {
+             // There is no guarantee that the CLGeocodeCompletionHandler will be invoked on the main thread.
+             // So we use a dispatch_async(dispatch_get_main_queue(),^{}) call to ensure that UI updates are always
+             // performed from the main thread.
+             //
+             NSLog(@"Error %@", error);
+             
+             dispatch_async(dispatch_get_main_queue(),^ {
+                 
+                 CLPlacemark *placemark = placemarks[indexPath.row];
+                 
+                 CLLocationDegrees latitude = placemark.location.coordinate.latitude;
+                 CLLocationDegrees longitude = placemark.location.coordinate.longitude;
+                 
+                 if (placemarks.count == 0)
+                 {
+                     // show an alert if no results were found
+                     UIAlertView *alert = [[UIAlertView alloc] init];
+                     alert.title = @"No places were found.";
+                     [alert addButtonWithTitle:@"OK"];
+                     [alert show];
+                 }
+             });
+         }];
+         
+         while (geoCoder.geocoding) {
+             // we are waiting for world peace
+         }
+         
+         
+         
+     }
+ }
 
 @end

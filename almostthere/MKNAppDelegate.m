@@ -13,6 +13,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [self initGeoFenceManager];
+    
     return YES;
 }
 							
@@ -41,6 +44,25 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - MK Geofence Manager
+
+- (void) initGeoFenceManager
+{
+    CLLocationCoordinate2D coords;
+    coords.longitude=-0.1015987;
+    coords.latitude=51.5286416;
+    
+    CLLocationDistance radius = 5000.0;
+    
+    
+    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:coords
+                                                                 radius:radius
+                                                             identifier:@"geofence"];
+    
+    self.geofenceManager = [[MKNGeoFenceManager alloc] initWithRegion:region];
+    [self.geofenceManager startWatching];
 }
 
 @end

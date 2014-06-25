@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F9A173D1949885B00606E65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9A173C1949885B00606E65 /* CoreLocation.framework */; };
+		1F9A17411949922500606E65 /* MKNGeoFenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A17401949922500606E65 /* MKNGeoFenceManager.m */; };
+		1F9A1743194BAE8500606E65 /* MKNGeoFenceManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A1742194BAE8500606E65 /* MKNGeoFenceManagerTest.m */; };
 		1FA102621933E69700BB70CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102611933E69700BB70CB /* Foundation.framework */; };
 		1FA102641933E69700BB70CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102631933E69700BB70CB /* CoreGraphics.framework */; };
 		1FA102661933E69700BB70CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102651933E69700BB70CB /* UIKit.framework */; };
@@ -15,7 +18,7 @@
 		1FA102721933E69800BB70CB /* MKNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA102711933E69800BB70CB /* MKNAppDelegate.m */; };
 		1FA102751933E69900BB70CB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA102731933E69900BB70CB /* Main_iPhone.storyboard */; };
 		1FA102781933E69900BB70CB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA102761933E69900BB70CB /* Main_iPad.storyboard */; };
-		1FA1027B1933E69900BB70CB /* MKNFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1027A1933E69900BB70CB /* MKNFirstViewController.m */; };
+		1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1027A1933E69900BB70CB /* MKNContactsController.m */; };
 		1FA1027E1933E69A00BB70CB /* MKNSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1027D1933E69A00BB70CB /* MKNSecondViewController.m */; };
 		1FA102801933E69A00BB70CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA1027F1933E69A00BB70CB /* Images.xcassets */; };
 		1FA102871933E69D00BB70CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102861933E69D00BB70CB /* XCTest.framework */; };
@@ -38,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		1617B5CD675C4AAD9D46DF9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F9A173C1949885B00606E65 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1F9A173F1949922500606E65 /* MKNGeoFenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNGeoFenceManager.h; sourceTree = "<group>"; };
+		1F9A17401949922500606E65 /* MKNGeoFenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNGeoFenceManager.m; sourceTree = "<group>"; };
+		1F9A1742194BAE8500606E65 /* MKNGeoFenceManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNGeoFenceManagerTest.m; sourceTree = "<group>"; };
 		1FA1025E1933E69700BB70CB /* almostthere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = almostthere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA102611933E69700BB70CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FA102631933E69700BB70CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,8 +57,8 @@
 		1FA102711933E69800BB70CB /* MKNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKNAppDelegate.m; sourceTree = "<group>"; };
 		1FA102741933E69900BB70CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		1FA102771933E69900BB70CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		1FA102791933E69900BB70CB /* MKNFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNFirstViewController.h; sourceTree = "<group>"; };
-		1FA1027A1933E69900BB70CB /* MKNFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKNFirstViewController.m; sourceTree = "<group>"; };
+		1FA102791933E69900BB70CB /* MKNContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNContactsController.h; sourceTree = "<group>"; };
+		1FA1027A1933E69900BB70CB /* MKNContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKNContactsController.m; sourceTree = "<group>"; };
 		1FA1027C1933E69A00BB70CB /* MKNSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNSecondViewController.h; sourceTree = "<group>"; };
 		1FA1027D1933E69A00BB70CB /* MKNSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKNSecondViewController.m; sourceTree = "<group>"; };
 		1FA1027F1933E69A00BB70CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9A173D1949885B00606E65 /* CoreLocation.framework in Frameworks */,
 				1FA102641933E69700BB70CB /* CoreGraphics.framework in Frameworks */,
 				1FA102661933E69700BB70CB /* UIKit.framework in Frameworks */,
 				1FA102621933E69700BB70CB /* Foundation.framework in Frameworks */,
@@ -88,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F9A173E194991D800606E65 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1F9A173F1949922500606E65 /* MKNGeoFenceManager.h */,
+				1F9A17401949922500606E65 /* MKNGeoFenceManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		1FA102551933E69500BB70CB = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +128,7 @@
 		1FA102601933E69700BB70CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F9A173C1949885B00606E65 /* CoreLocation.framework */,
 				1FA102611933E69700BB70CB /* Foundation.framework */,
 				1FA102631933E69700BB70CB /* CoreGraphics.framework */,
 				1FA102651933E69700BB70CB /* UIKit.framework */,
@@ -123,12 +141,13 @@
 		1FA102671933E69700BB70CB /* almostthere */ = {
 			isa = PBXGroup;
 			children = (
+				1F9A173E194991D800606E65 /* Manager */,
 				1FA102701933E69800BB70CB /* MKNAppDelegate.h */,
 				1FA102711933E69800BB70CB /* MKNAppDelegate.m */,
 				1FA102731933E69900BB70CB /* Main_iPhone.storyboard */,
 				1FA102761933E69900BB70CB /* Main_iPad.storyboard */,
-				1FA102791933E69900BB70CB /* MKNFirstViewController.h */,
-				1FA1027A1933E69900BB70CB /* MKNFirstViewController.m */,
+				1FA102791933E69900BB70CB /* MKNContactsController.h */,
+				1FA1027A1933E69900BB70CB /* MKNContactsController.m */,
 				1FA1027C1933E69A00BB70CB /* MKNSecondViewController.h */,
 				1FA1027D1933E69A00BB70CB /* MKNSecondViewController.m */,
 				1FA1027F1933E69A00BB70CB /* Images.xcassets */,
@@ -153,6 +172,7 @@
 			children = (
 				1FA102921933E69E00BB70CB /* almostthereTests.m */,
 				1FA1028D1933E69D00BB70CB /* Supporting Files */,
+				1F9A1742194BAE8500606E65 /* MKNGeoFenceManagerTest.m */,
 			);
 			path = almostthereTests;
 			sourceTree = "<group>";
@@ -301,8 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA1026E1933E69800BB70CB /* main.m in Sources */,
+				1F9A17411949922500606E65 /* MKNGeoFenceManager.m in Sources */,
 				1FA1027E1933E69A00BB70CB /* MKNSecondViewController.m in Sources */,
-				1FA1027B1933E69900BB70CB /* MKNFirstViewController.m in Sources */,
+				1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */,
 				1FA102721933E69800BB70CB /* MKNAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9A1743194BAE8500606E65 /* MKNGeoFenceManagerTest.m in Sources */,
 				1FA102931933E69E00BB70CB /* almostthereTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "almostthere/almostthere-Prefix.pch";
 				INFOPLIST_FILE = "almostthere/almostthere-Info.plist";
@@ -453,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "almostthere/almostthere-Prefix.pch";
 				INFOPLIST_FILE = "almostthere/almostthere-Info.plist";
