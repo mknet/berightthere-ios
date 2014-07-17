@@ -19,7 +19,7 @@
 		1FA102751933E69900BB70CB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA102731933E69900BB70CB /* Main_iPhone.storyboard */; };
 		1FA102781933E69900BB70CB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA102761933E69900BB70CB /* Main_iPad.storyboard */; };
 		1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1027A1933E69900BB70CB /* MKNContactsController.m */; };
-		1FA1027E1933E69A00BB70CB /* MKNSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1027D1933E69A00BB70CB /* MKNSecondViewController.m */; };
+		1FA1027E1933E69A00BB70CB /* MKNJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1027D1933E69A00BB70CB /* MKNJobsViewController.m */; };
 		1FA102801933E69A00BB70CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA1027F1933E69A00BB70CB /* Images.xcassets */; };
 		1FA102871933E69D00BB70CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102861933E69D00BB70CB /* XCTest.framework */; };
 		1FA102881933E69D00BB70CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102611933E69700BB70CB /* Foundation.framework */; };
@@ -59,8 +59,8 @@
 		1FA102771933E69900BB70CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		1FA102791933E69900BB70CB /* MKNContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNContactsController.h; sourceTree = "<group>"; };
 		1FA1027A1933E69900BB70CB /* MKNContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKNContactsController.m; sourceTree = "<group>"; };
-		1FA1027C1933E69A00BB70CB /* MKNSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNSecondViewController.h; sourceTree = "<group>"; };
-		1FA1027D1933E69A00BB70CB /* MKNSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKNSecondViewController.m; sourceTree = "<group>"; };
+		1FA1027C1933E69A00BB70CB /* MKNJobsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNJobsViewController.h; sourceTree = "<group>"; };
+		1FA1027D1933E69A00BB70CB /* MKNJobsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKNJobsViewController.m; sourceTree = "<group>"; };
 		1FA1027F1933E69A00BB70CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FA102851933E69D00BB70CB /* almostthereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = almostthereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA102861933E69D00BB70CB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -148,8 +148,8 @@
 				1FA102761933E69900BB70CB /* Main_iPad.storyboard */,
 				1FA102791933E69900BB70CB /* MKNContactsController.h */,
 				1FA1027A1933E69900BB70CB /* MKNContactsController.m */,
-				1FA1027C1933E69A00BB70CB /* MKNSecondViewController.h */,
-				1FA1027D1933E69A00BB70CB /* MKNSecondViewController.m */,
+				1FA1027C1933E69A00BB70CB /* MKNJobsViewController.h */,
+				1FA1027D1933E69A00BB70CB /* MKNJobsViewController.m */,
 				1FA1027F1933E69A00BB70CB /* Images.xcassets */,
 				1FA102681933E69700BB70CB /* Supporting Files */,
 			);
@@ -322,7 +322,7 @@
 			files = (
 				1FA1026E1933E69800BB70CB /* main.m in Sources */,
 				1F9A17411949922500606E65 /* MKNGeoFenceManager.m in Sources */,
-				1FA1027E1933E69A00BB70CB /* MKNSecondViewController.m in Sources */,
+				1FA1027E1933E69A00BB70CB /* MKNJobsViewController.m in Sources */,
 				1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */,
 				1FA102721933E69800BB70CB /* MKNAppDelegate.m in Sources */,
 			);

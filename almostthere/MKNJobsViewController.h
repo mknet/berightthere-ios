@@ -1,5 +1,5 @@
 //
-//  MKNSecondViewController.h
+//  MKNJobsViewController.h
 //  almostthere
 //
 //  Created by Marcel Koch on 26.05.14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MKNSecondViewController : UIViewController
+@interface MKNJobsViewController : UITableViewController
 
 @end

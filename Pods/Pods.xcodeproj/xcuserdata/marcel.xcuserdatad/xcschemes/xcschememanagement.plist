@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RHAddressBook.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>39F55F30E14440BFBAD1E2F3</key>
+		<key>3D2A54FF2A4C4C7CB5200F85</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC579F9DAD23491686A51D85</key>
+		<key>41B8D0A5272D4AF2987627D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE13AD7F543E4703B47E2A93</key>
 		<dict>
 			<key>primary</key>
 			<true/>

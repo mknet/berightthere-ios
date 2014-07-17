@@ -1,10 +1,13 @@
 PODS:
+  - DZNEmptyDataSet (1.3)
   - RHAddressBook (1.1.1)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - RHAddressBook (~> 1.1)
 
 SPEC CHECKSUMS:
+  DZNEmptyDataSet: e611d4a2740919aa6625e68f2ae82382f223e582
   RHAddressBook: 0cad9d33b9494d1e28323b62e5c7afc109cc4294
 
 COCOAPODS: 0.33.1
