@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */; };
 		1F9A173D1949885B00606E65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9A173C1949885B00606E65 /* CoreLocation.framework */; };
 		1F9A17411949922500606E65 /* MKNGeoFenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A17401949922500606E65 /* MKNGeoFenceManager.m */; };
 		1F9A1743194BAE8500606E65 /* MKNGeoFenceManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A1742194BAE8500606E65 /* MKNGeoFenceManagerTest.m */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		1617B5CD675C4AAD9D46DF9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F75D32B197C16AC0025EB64 /* MKNWriteMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNWriteMessageViewController.h; sourceTree = "<group>"; };
+		1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNWriteMessageViewController.m; sourceTree = "<group>"; };
 		1F9A173C1949885B00606E65 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1F9A173F1949922500606E65 /* MKNGeoFenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNGeoFenceManager.h; sourceTree = "<group>"; };
 		1F9A17401949922500606E65 /* MKNGeoFenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNGeoFenceManager.m; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 		1FA102671933E69700BB70CB /* almostthere */ = {
 			isa = PBXGroup;
 			children = (
+				1F75D32B197C16AC0025EB64 /* MKNWriteMessageViewController.h */,
+				1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */,
 				1F9A173E194991D800606E65 /* Manager */,
 				1FA102701933E69800BB70CB /* MKNAppDelegate.h */,
 				1FA102711933E69800BB70CB /* MKNAppDelegate.m */,
@@ -325,6 +330,7 @@
 				1FA1027E1933E69A00BB70CB /* MKNJobsViewController.m in Sources */,
 				1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */,
 				1FA102721933E69800BB70CB /* MKNAppDelegate.m in Sources */,
+				1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

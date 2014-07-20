@@ -8,6 +8,7 @@
 
 #import "MKNContactsController.h"
 #import "MKNAppDelegate.h"
+#import "MKNWriteMessageViewController.h"
 
 #import <RHAddressBook/AddressBook.h>
 
@@ -145,6 +146,9 @@
          NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
          RHPerson *person = self.contacts[indexPath.row];
          
+         MKNWriteMessageViewController *destinationController = segue.destinationViewController;
+         [destinationController setContactName: person.name];
+         
          //TODO Extract address extraction code
          
          RHMultiValue *mv = [person addresses];
@@ -175,6 +179,9 @@
                  CLLocationDegrees latitude = placemark.location.coordinate.latitude;
                  CLLocationDegrees longitude = placemark.location.coordinate.longitude;
                  
+                 
+                 [destinationController showLongitude: longitude];
+                 
                  if (placemarks.count == 0)
                  {
                      // show an alert if no results were found
@@ -189,9 +196,6 @@
          while (geoCoder.geocoding) {
              // we are waiting for world peace
          }
-         
-         
-         
      }
  }
 
