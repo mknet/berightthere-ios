@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
-#import "MKNGeoFenceManager.h"
-
-@interface MKNContactsController : UITableViewController <CLLocationManagerDelegate>
+@interface MKNContactsController : UITableViewController
 @end

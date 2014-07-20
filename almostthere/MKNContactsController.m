@@ -15,14 +15,8 @@
 
 @interface MKNContactsController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
-@property (strong) NSMutableArray *favourites;
 @property (strong) RHAddressBook *ab;
 @property (strong) NSArray *contacts;
-
-@property (strong) CLLocationManager *locationManager;
-@property (strong) CLRegion *testRegion;
-
-@property (strong) MKNGeoFenceManager *manager;
 
 @end
 
@@ -31,7 +25,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.favourites = [NSMutableArray array];
 }
 
 - (void)viewDidLoad
@@ -49,14 +42,23 @@
         }];
     }
     
-    self.contacts = [[NSArray alloc] init];
+    self.contacts = [ab people];
     
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
     
     // A little trick for removing the cell separators
     self.tableView.tableFooterView = [UIView new];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Fertig" style: UIBarButtonItemStyleDone target:self action:@selector(closeView:)];
 
+}
+
+- (void)closeView:(id)sender
+{
+    [self dismissViewControllerAnimated:true completion:^{
+        //
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,7 +82,7 @@
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
-     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavouriteCell" forIndexPath:indexPath];
+     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
      
      RHPerson *person = self.contacts[indexPath.row];
      NSString *name = [person name];

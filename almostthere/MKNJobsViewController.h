@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MKNJobsViewController : UITableViewController
+#import <CoreLocation/CoreLocation.h>
+
+#import "MKNGeoFenceManager.h"
+
+@interface MKNJobsViewController : UITableViewController <CLLocationManagerDelegate>
 
 @end
