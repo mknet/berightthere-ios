@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MKNContactsManager.h"
 #import "MKNGeoFenceManager.h"
 
 @interface MKNAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong) MKNContactsManager *contactsManager;
 @property (strong) MKNGeoFenceManager *geofenceManager;
 
 @end

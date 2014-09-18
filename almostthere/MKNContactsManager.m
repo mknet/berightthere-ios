@@ -25,8 +25,14 @@
 
 - (NSArray*)peopleWithAtLeastOneAdress
 {
-    NSArray *result = [self.addressBook people];
+    NSArray *people = [self.addressBook peopleOrderedByFirstName];
+    NSMutableArray *result = [NSMutableArray array];
     
+    for(RHPerson *person in people) {
+        if ([[person.addresses values] count] > 0){
+            [result addObject:person];
+        }
+    }
     return result;
 }
 

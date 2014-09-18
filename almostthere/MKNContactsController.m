@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Marcel Koch. All rights reserved.
 //
 
+#import "MKNAppDelegate.h"
 #import "MKNContactsController.h"
 #import "MKNAppDelegate.h"
 #import "MKNWriteMessageViewController.h"
@@ -16,6 +17,7 @@
 
 @interface MKNContactsController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
+@property (strong) MKNAppDelegate *app;
 @property (strong) RHAddressBook *ab;
 @property (strong) NSArray *contacts;
 
@@ -32,18 +34,9 @@
 {
     [super viewDidLoad];
     
-    RHAddressBook *ab = [[RHAddressBook alloc] init];
-	
-    //query current status, pre iOS6 always returns Authorized
-    if ([RHAddressBook authorizationStatus] == RHAuthorizationStatusNotDetermined){
-        
-        //request authorization
-        [ab requestAuthorizationWithCompletion:^(bool granted, NSError *error) {
-            self.ab = ab;
-        }];
-    }
+    self.app = [[UIApplication sharedApplication] delegate];
     
-    self.contacts = [ab people];
+    self.contacts = self.app.contactsManager.peopleWithAtLeastOneAdress;
     
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;

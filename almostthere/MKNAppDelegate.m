@@ -14,6 +14,7 @@
 {
     // Override point for customization after application launch.
     
+    [self initContactsManager];
     [self initGeoFenceManager];
     
     return YES;
@@ -63,6 +64,21 @@
     
     self.geofenceManager = [[MKNGeoFenceManager alloc] initWithRegion:region];
     [self.geofenceManager startWatching];
+}
+
+- (void) initContactsManager
+{
+    RHAddressBook *ab = [[RHAddressBook alloc] init];
+    
+    //query current status, pre iOS6 always returns Authorized
+    if ([RHAddressBook authorizationStatus] == RHAuthorizationStatusNotDetermined){
+        
+        //request authorization
+        [ab requestAuthorizationWithCompletion:^(bool granted, NSError *error) {
+        }];
+    }
+    
+    self.contactsManager = [[MKNContactsManager alloc] initWithRHAddressBook:ab];
 }
 
 @end
