@@ -166,15 +166,6 @@
              NSLog(@"Error %@", error);
              
              dispatch_async(dispatch_get_main_queue(),^ {
-                 
-                 CLPlacemark *placemark = placemarks[indexPath.row];
-                 
-                 CLLocationDegrees latitude = placemark.location.coordinate.latitude;
-                 CLLocationDegrees longitude = placemark.location.coordinate.longitude;
-                 
-                 
-                 [destinationController showLongitude: longitude];
-                 
                  if (placemarks.count == 0)
                  {
                      // show an alert if no results were found
@@ -182,6 +173,13 @@
                      alert.title = @"No places were found.";
                      [alert addButtonWithTitle:@"OK"];
                      [alert show];
+                 } else {
+                     CLPlacemark *placemark = placemarks[0]; // first placemark found
+                     
+                     CLLocationDegrees latitude = placemark.location.coordinate.latitude;
+                     CLLocationDegrees longitude = placemark.location.coordinate.longitude;
+                     
+                     [destinationController showLongitude: longitude];
                  }
              });
          }];
