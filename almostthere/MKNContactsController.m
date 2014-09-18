@@ -7,6 +7,7 @@
 //
 
 #import "MKNAppDelegate.h"
+#import "MKNAddressSelectionController.h"
 #import "MKNContactsController.h"
 #import "MKNAppDelegate.h"
 #import "MKNWriteMessageViewController.h"
@@ -145,6 +146,12 @@
          //TODO Extract address extraction code
          
          RHMultiValue *mv = [person addresses];
+         
+         if (mv.count > 1) {
+             [self showAddressSelection:[mv values]];
+         } else {
+             
+         
          NSDictionary *firstAddress = [mv valueAtIndex:0];
          
          NSString *addressString = [NSString stringWithFormat:@"%@ %@",
@@ -154,9 +161,6 @@
                                     ];
          
          CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
-
-         
-         MKNAppDelegate *appDelegate = (MKNAppDelegate *)[[UIApplication sharedApplication] delegate];
          
          [geoCoder geocodeAddressString:addressString completionHandler:^(NSArray *placemarks, NSError *error) {
              // There is no guarantee that the CLGeocodeCompletionHandler will be invoked on the main thread.
@@ -187,8 +191,16 @@
          while (geoCoder.geocoding) {
              // we are waiting for world peace
          }
+         }
      }
  }
+
+- (void) showAddressSelection:(NSArray *)addresses {
+    UIStoryboard *storyboard = self.storyboard;
+    UINavigationController *addressController = [storyboard instantiateViewControllerWithIdentifier:@"AddressSelectionNav"];
+    
+    [self presentViewController:addressController animated:YES completion:nil];
+}
 
 #pragma mark - DZNEmptyDataSetSource Methods
 
