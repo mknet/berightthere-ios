@@ -27,6 +27,9 @@
 		1FA102891933E69D00BB70CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102651933E69700BB70CB /* UIKit.framework */; };
 		1FA102911933E69E00BB70CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FA1028F1933E69E00BB70CB /* InfoPlist.strings */; };
 		1FA102931933E69E00BB70CB /* almostthereTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA102921933E69E00BB70CB /* almostthereTests.m */; };
+		1FCEBA6919CAC22B00411A29 /* MKNContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6819CAC22B00411A29 /* MKNContactsManager.m */; };
+		1FCEBA6B19CAC6D800411A29 /* MKNContactsManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6A19CAC6D800411A29 /* MKNContactsManagerTest.m */; };
+		1FCEBA6D19CAC9D900411A29 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCEBA6C19CAC9D900411A29 /* libPods.a */; };
 		8AC3752186E24A919C5AB97D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1617B5CD675C4AAD9D46DF9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,10 @@
 		1FA1028E1933E69D00BB70CB /* almostthereTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "almostthereTests-Info.plist"; sourceTree = "<group>"; };
 		1FA102901933E69E00BB70CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FA102921933E69E00BB70CB /* almostthereTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = almostthereTests.m; sourceTree = "<group>"; };
+		1FCEBA6719CAC22B00411A29 /* MKNContactsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNContactsManager.h; sourceTree = "<group>"; };
+		1FCEBA6819CAC22B00411A29 /* MKNContactsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNContactsManager.m; sourceTree = "<group>"; };
+		1FCEBA6A19CAC6D800411A29 /* MKNContactsManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNContactsManagerTest.m; sourceTree = "<group>"; };
+		1FCEBA6C19CAC9D900411A29 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		9BE3978D4F1342C0975E56C8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +100,7 @@
 				1FA102871933E69D00BB70CB /* XCTest.framework in Frameworks */,
 				1FA102891933E69D00BB70CB /* UIKit.framework in Frameworks */,
 				1FA102881933E69D00BB70CB /* Foundation.framework in Frameworks */,
+				1FCEBA6D19CAC9D900411A29 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,8 @@
 			children = (
 				1F9A173F1949922500606E65 /* MKNGeoFenceManager.h */,
 				1F9A17401949922500606E65 /* MKNGeoFenceManager.m */,
+				1FCEBA6719CAC22B00411A29 /* MKNContactsManager.h */,
+				1FCEBA6819CAC22B00411A29 /* MKNContactsManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -131,6 +141,7 @@
 		1FA102601933E69700BB70CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FCEBA6C19CAC9D900411A29 /* libPods.a */,
 				1F9A173C1949885B00606E65 /* CoreLocation.framework */,
 				1FA102611933E69700BB70CB /* Foundation.framework */,
 				1FA102631933E69700BB70CB /* CoreGraphics.framework */,
@@ -178,6 +189,7 @@
 				1FA102921933E69E00BB70CB /* almostthereTests.m */,
 				1FA1028D1933E69D00BB70CB /* Supporting Files */,
 				1F9A1742194BAE8500606E65 /* MKNGeoFenceManagerTest.m */,
+				1FCEBA6A19CAC6D800411A29 /* MKNContactsManagerTest.m */,
 			);
 			path = almostthereTests;
 			sourceTree = "<group>";
@@ -330,6 +342,7 @@
 				1FA1027E1933E69A00BB70CB /* MKNJobsViewController.m in Sources */,
 				1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */,
 				1FA102721933E69800BB70CB /* MKNAppDelegate.m in Sources */,
+				1FCEBA6919CAC22B00411A29 /* MKNContactsManager.m in Sources */,
 				1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCEBA6B19CAC6D800411A29 /* MKNContactsManagerTest.m in Sources */,
 				1F9A1743194BAE8500606E65 /* MKNGeoFenceManagerTest.m in Sources */,
 				1FA102931933E69E00BB70CB /* almostthereTests.m in Sources */,
 			);
@@ -493,6 +507,7 @@
 		};
 		1FA1029A1933E69E00BB70CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE3978D4F1342C0975E56C8 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/almostthere.app/almostthere";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -507,6 +522,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "almostthereTests/almostthereTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -515,6 +534,7 @@
 		};
 		1FA1029B1933E69E00BB70CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE3978D4F1342C0975E56C8 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/almostthere.app/almostthere";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -525,6 +545,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "almostthere/almostthere-Prefix.pch";
 				INFOPLIST_FILE = "almostthereTests/almostthereTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

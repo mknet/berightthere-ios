@@ -51,5 +51,65 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "almostthereTests/MKNContactsManagerTest.m"
+            timestampString = "432721711.995092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-testPeopleWithAtLeastOneAddress"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MKNContactsManagerTest testPeopleWithAtLeastOneAddress]"
+                  moduleName = "almostthereTests"
+                  urlString = "file:///Users/marcel/Development/almostthere/ios/almostthere/almostthereTests/MKNContactsManagerTest.m"
+                  timestampString = "432721719.513601"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MKNContactsManagerTest testPeopleWithAtLeastOneAddress]"
+                  moduleName = "almostthereTests"
+                  urlString = "file:///Users/marcel/Development/almostthere/ios/almostthere/almostthereTests/MKNContactsManagerTest.m"
+                  timestampString = "432721719.524383"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "425">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MKNContactsManagerTest testPeopleWithAtLeastOneAddress]"
+                  moduleName = "almostthereTests"
+                  urlString = "file:///Users/marcel/Development/almostthere/ios/almostthere/almostthereTests/MKNContactsManagerTest.m"
+                  timestampString = "432721719.524766"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "480">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
