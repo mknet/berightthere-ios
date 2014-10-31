@@ -7,6 +7,7 @@
 //
 
 #import "MKNAppDelegate.h"
+#import "Parse/Parse.h"
 
 @implementation MKNAppDelegate
 
@@ -16,6 +17,11 @@
     
     [self initContactsManager];
     [self initGeoFenceManager];
+    
+    [Parse setApplicationId:@"52MArBOtYcwF4cExRv145kx53C84Gieoy1E69d8f"
+                  clientKey:@"yN48kT6rNWjvy5rx0QWSGikmlRV5CzhyofVyNY81"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;
 }

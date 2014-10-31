@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */; };
+		1F8EA0121A03CA0500CA8B70 /* MKNJobsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */; };
+		1F8EA0141A03CB4B00CA8B70 /* MKNJobManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0131A03CB4B00CA8B70 /* MKNJobManagerTest.m */; };
 		1F9A173D1949885B00606E65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9A173C1949885B00606E65 /* CoreLocation.framework */; };
 		1F9A17411949922500606E65 /* MKNGeoFenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A17401949922500606E65 /* MKNGeoFenceManager.m */; };
 		1F9A1743194BAE8500606E65 /* MKNGeoFenceManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A1742194BAE8500606E65 /* MKNGeoFenceManagerTest.m */; };
@@ -48,6 +50,9 @@
 		1617B5CD675C4AAD9D46DF9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F75D32B197C16AC0025EB64 /* MKNWriteMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNWriteMessageViewController.h; sourceTree = "<group>"; };
 		1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNWriteMessageViewController.m; sourceTree = "<group>"; };
+		1F8EA0101A03CA0500CA8B70 /* MKNJobsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNJobsManager.h; sourceTree = "<group>"; };
+		1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNJobsManager.m; sourceTree = "<group>"; };
+		1F8EA0131A03CB4B00CA8B70 /* MKNJobManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNJobManagerTest.m; sourceTree = "<group>"; };
 		1F9A173C1949885B00606E65 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1F9A173F1949922500606E65 /* MKNGeoFenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNGeoFenceManager.h; sourceTree = "<group>"; };
 		1F9A17401949922500606E65 /* MKNGeoFenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNGeoFenceManager.m; sourceTree = "<group>"; };
@@ -117,6 +122,8 @@
 				1F9A17401949922500606E65 /* MKNGeoFenceManager.m */,
 				1FCEBA6719CAC22B00411A29 /* MKNContactsManager.h */,
 				1FCEBA6819CAC22B00411A29 /* MKNContactsManager.m */,
+				1F8EA0101A03CA0500CA8B70 /* MKNJobsManager.h */,
+				1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 				1FA1028D1933E69D00BB70CB /* Supporting Files */,
 				1F9A1742194BAE8500606E65 /* MKNGeoFenceManagerTest.m */,
 				1FCEBA6A19CAC6D800411A29 /* MKNContactsManagerTest.m */,
+				1F8EA0131A03CB4B00CA8B70 /* MKNJobManagerTest.m */,
 			);
 			path = almostthereTests;
 			sourceTree = "<group>";
@@ -349,6 +357,7 @@
 				1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */,
 				1FA102721933E69800BB70CB /* MKNAppDelegate.m in Sources */,
 				1FCEBA6919CAC22B00411A29 /* MKNContactsManager.m in Sources */,
+				1F8EA0121A03CA0500CA8B70 /* MKNJobsManager.m in Sources */,
 				1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +368,7 @@
 			files = (
 				1FCEBA6B19CAC6D800411A29 /* MKNContactsManagerTest.m in Sources */,
 				1F9A1743194BAE8500606E65 /* MKNGeoFenceManagerTest.m in Sources */,
+				1F8EA0141A03CB4B00CA8B70 /* MKNJobManagerTest.m in Sources */,
 				1FA102931933E69E00BB70CB /* almostthereTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

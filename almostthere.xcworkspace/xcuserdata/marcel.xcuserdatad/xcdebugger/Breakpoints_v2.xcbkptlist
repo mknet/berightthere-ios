@@ -65,6 +65,64 @@
             endingLineNumber = "39"
             landmarkName = "-testPeopleWithAtLeastOneAddress"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MKNContactsManagerTest testPeopleWithAtLeastOneAddress]"
+                  moduleName = "almostthereTests"
+                  urlString = "file:///Users/marcel/Development/almostthere/ios/almostthere/almostthereTests/MKNContactsManagerTest.m"
+                  timestampString = "436456939.775158"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "97">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MKNContactsManagerTest testPeopleWithAtLeastOneAddress]"
+                  moduleName = "almostthereTests"
+                  urlString = "file:///Users/marcel/Development/almostthere/ios/almostthere/almostthereTests/MKNContactsManagerTest.m"
+                  timestampString = "436456939.775409"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "522">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MKNContactsManagerTest testPeopleWithAtLeastOneAddress]"
+                  moduleName = "almostthereTests"
+                  urlString = "file:///Users/marcel/Development/almostthere/ios/almostthere/almostthereTests/MKNContactsManagerTest.m"
+                  timestampString = "436456939.775599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "568">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MKNContactsManagerTest testPeopleWithAtLeastOneAddress]"
+                  moduleName = "almostthereTests"
+                  urlString = "file:///Users/marcel/Development/almostthere/ios/almostthere/almostthereTests/MKNContactsManagerTest.m"
+                  timestampString = "436456939.775774"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "696">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,6 +138,22 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "almostthere/MKNJobsManager.m"
+            timestampString = "436456846.740981"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-saveJob"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
