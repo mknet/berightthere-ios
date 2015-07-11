@@ -11,5 +11,6 @@
 @interface MKNJobsManager : NSObject
 
 - (void)saveJob;
+- (void)printJobs;
 
 @end

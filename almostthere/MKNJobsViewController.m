@@ -10,6 +10,8 @@
 
 #import "UIScrollView+EmptyDataSet.h"
 
+#import "MKNFavouritesCollectionViewController.h"
+
 @interface MKNJobsViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @property (strong) NSMutableArray *jobs;
@@ -53,7 +55,8 @@
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
 {
-    NSString *text = @"No colors loaded";
+    
+    NSString *text = @"Keine Jobs vorhanden";
     
     NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
@@ -98,7 +101,10 @@
 
 - (UIView *)customViewForEmptyDataSet:(UIScrollView *)scrollView
 {
-    return nil;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    MKNFavouritesCollectionViewController *favController = [storyboard instantiateViewControllerWithIdentifier:@"MKNFavouritesCollectionViewController"];
+    
+    return favController.view;
 }
 
 - (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView
