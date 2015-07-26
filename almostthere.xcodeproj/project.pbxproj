@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F0319F01B5EFE9400246C97 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F0319EF1B5EFE9400246C97 /* View.xib */; };
 		1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */; };
 		1F8EA0121A03CA0500CA8B70 /* MKNJobsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */; };
 		1F8EA0141A03CB4B00CA8B70 /* MKNJobManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0131A03CB4B00CA8B70 /* MKNJobManagerTest.m */; };
@@ -50,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		1617B5CD675C4AAD9D46DF9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F0319EF1B5EFE9400246C97 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		1F75D32B197C16AC0025EB64 /* MKNWriteMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNWriteMessageViewController.h; sourceTree = "<group>"; };
 		1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNWriteMessageViewController.m; sourceTree = "<group>"; };
 		1F8EA0101A03CA0500CA8B70 /* MKNJobsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNJobsManager.h; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				1FA102701933E69800BB70CB /* MKNAppDelegate.h */,
 				1FA102711933E69800BB70CB /* MKNAppDelegate.m */,
 				1FA102731933E69900BB70CB /* Main_iPhone.storyboard */,
-				1F0319EF1B5EFE9400246C97 /* View.xib */,
 				1FA102761933E69900BB70CB /* Main_iPad.storyboard */,
 				1FA102791933E69900BB70CB /* MKNContactsController.h */,
 				1FA1027A1933E69900BB70CB /* MKNContactsController.m */,
@@ -322,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA102781933E69900BB70CB /* Main_iPad.storyboard in Resources */,
-				1F0319F01B5EFE9400246C97 /* View.xib in Resources */,
 				1FA102801933E69A00BB70CB /* Images.xcassets in Resources */,
 				1FA102751933E69900BB70CB /* Main_iPhone.storyboard in Resources */,
 				1FA1026C1933E69800BB70CB /* InfoPlist.strings in Resources */,

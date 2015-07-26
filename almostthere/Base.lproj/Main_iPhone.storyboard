@@ -278,32 +278,6 @@
             </objects>
             <point key="canvasLocation" x="1669" y="-187"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="2g6-wf-NY1">
-            <objects>
-                <viewController storyboardIdentifier="LonelyView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SvM-rw-vRq" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I4s-ea-2Um"/>
-                        <viewControllerLayoutGuide type="bottom" id="oaB-Ys-f8O"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="x46-nf-UdL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Einsame View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdS-he-MbO">
-                                <rect key="frame" x="16" y="28" width="107" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oNK-C7-3Ku" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1139" y="472"/>
-        </scene>
         <!--Favourites Collection View Controller-->
         <scene sceneID="7YG-06-1i0">
             <objects>
