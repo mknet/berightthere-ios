@@ -86,14 +86,4 @@
     return YES;
 }
 
-- (void)emptyDataSetDidTapView:(UIScrollView *)scrollView
-{
-    
-}
-
-- (void)emptyDataSetDidTapButton:(UIScrollView *)scrollView
-{
-    
-}
-
 @end

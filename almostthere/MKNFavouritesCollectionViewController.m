@@ -18,11 +18,11 @@
     
     self.favs = [[NSMutableArray alloc] init];
     
-    [self.favs addObject:@"Hallo"];
-    [self.favs addObject:@"Welt"];
-    [self.favs addObject:@"Hallo2"];
-    [self.favs addObject:@"Welt2"];
-    [self.favs addObject:@"Hallo3"];
+    [self.favs addObject:@"Eins"];
+    [self.favs addObject:@"Zwo"];
+    [self.favs addObject:@"Drei"];
+    [self.favs addObject:@"Vier"];
+    [self.favs addObject:@"Fünf"];
 }
 
 #pragma mark CollectionView methods
@@ -40,8 +40,8 @@
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    UILabel *label = (UILabel *)[cell viewWithTag:100];
-    label.text = [self.favs objectAtIndex:indexPath.row];
+    UIButton *button = (UIButton *)[cell viewWithTag:100];
+    [button setTitle:[self.favs objectAtIndex:indexPath.row] forState:UIControlStateNormal];
     
     [cell.layer setBorderWidth:2.0f];
     [cell.layer setBorderColor:[UIColor grayColor].CGColor];
@@ -50,4 +50,9 @@
     return cell;
 }
 
+- (IBAction)buttonTouched:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    NSLog(@"I was touched");
+    NSLog(button.currentTitle);
+}
 @end
