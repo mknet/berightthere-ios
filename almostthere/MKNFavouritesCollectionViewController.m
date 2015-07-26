@@ -8,10 +8,7 @@
 
 #import "MKNFavouritesCollectionViewController.h"
 
-@implementation MKNFavouritesCollectionViewController {
-    
-    
-}
+@implementation MKNFavouritesCollectionViewController
 
 -(void)viewDidLoad {
     [super viewDidLoad];
