@@ -21,6 +21,9 @@
 
 @property (strong) MKNGeoFenceManager *manager;
 
+@property (strong) MKNFavouritesCollectionViewController *favsViewController;
+@property (strong) UICollectionView *favsView;
+
 @end
 
 @implementation MKNJobsViewController
@@ -53,64 +56,22 @@
 
 #pragma mark - DZNEmptyDataSetSource Methods
 
-- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
-{
-    
-    NSString *text = @"Keine Jobs vorhanden";
-    
-    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
-    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-    paragraphStyle.alignment = NSTextAlignmentCenter;
-    
-    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:17.0],
-                                 NSForegroundColorAttributeName: [UIColor colorWithRed:170/255.0 green:171/255.0 blue:179/255.0 alpha:1.0],
-                                 NSParagraphStyleAttributeName: paragraphStyle};
-    
-    return [[NSMutableAttributedString alloc] initWithString:text attributes:attributes];
-}
-
-- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
-{
-    NSString *text = @"To show a list of random colors, tap on the refresh icon in the right top corner.\n\nTo clean the list, tap on the trash icon.";
-    
-    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
-    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
-    paragraphStyle.alignment = NSTextAlignmentCenter;
-    
-    NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15.0],
-                                 NSForegroundColorAttributeName: [UIColor colorWithRed:170/255.0 green:171/255.0 blue:179/255.0 alpha:1.0],
-                                 NSParagraphStyleAttributeName: paragraphStyle};
-    
-    return [[NSMutableAttributedString alloc] initWithString:text attributes:attributes];
-}
-
-- (NSAttributedString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state
-{
-    return nil;
-}
-
-- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
-{
-    return [UIImage imageNamed:@"empty_placeholder"];
-}
-
-- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView
-{
-    return [UIColor whiteColor];
-}
 
 - (UIView *)customViewForEmptyDataSet:(UIScrollView *)scrollView
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-    MKNFavouritesCollectionViewController *favController = [storyboard instantiateViewControllerWithIdentifier:@"MKNFavouritesCollectionViewController"];
     
-    return favController.view;
+    NSString *viewControllerId = @"MKNFavouritesCollectionViewController";
+    self.favsViewController = [storyboard instantiateViewControllerWithIdentifier:viewControllerId];
+    
+    UIView *favsView = self.favsViewController.collectionView;
+    favsView.autoresizingMask = UIViewAutoresizingNone;
+    favsView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    return favsView;
 }
 
-- (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView
-{
-    return 0;
-}
+
 
 
 #pragma mark - DZNEmptyDataSetSource Methods

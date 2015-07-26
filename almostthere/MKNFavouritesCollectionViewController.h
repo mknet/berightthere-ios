@@ -10,4 +10,6 @@
 
 @interface MKNFavouritesCollectionViewController : UICollectionViewController
 
+@property (strong) NSMutableArray *favs;
+
 @end

@@ -10,17 +10,19 @@
 
 @implementation MKNFavouritesCollectionViewController {
     
-    NSMutableArray * array;
     
 }
 
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    array = [[NSMutableArray alloc] init];
+    self.favs = [[NSMutableArray alloc] init];
     
-    [array addObject:@"Hallo"];
-    [array addObject:@"Welt"];
+    [self.favs addObject:@"Hallo"];
+    [self.favs addObject:@"Welt"];
+    [self.favs addObject:@"Hallo2"];
+    [self.favs addObject:@"Welt2"];
+    [self.favs addObject:@"Hallo3"];
 }
 
 #pragma mark CollectionView methods
@@ -31,7 +33,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return [array count];
+    return [self.favs count];
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -39,11 +41,11 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     UILabel *label = (UILabel *)[cell viewWithTag:100];
-    label.text = [array objectAtIndex:indexPath.row];
+    label.text = [self.favs objectAtIndex:indexPath.row];
     
     [cell.layer setBorderWidth:2.0f];
     [cell.layer setBorderColor:[UIColor grayColor].CGColor];
-    [cell.layer setCornerRadius:50.0f];
+    [cell.layer setCornerRadius:10.0f];
     
     return cell;
 }

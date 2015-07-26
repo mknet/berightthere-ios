@@ -278,19 +278,45 @@
             </objects>
             <point key="canvasLocation" x="1669" y="-187"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="2g6-wf-NY1">
+            <objects>
+                <viewController storyboardIdentifier="LonelyView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SvM-rw-vRq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I4s-ea-2Um"/>
+                        <viewControllerLayoutGuide type="bottom" id="oaB-Ys-f8O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x46-nf-UdL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Einsame View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdS-he-MbO">
+                                <rect key="frame" x="16" y="28" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNK-C7-3Ku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="472"/>
+        </scene>
         <!--Favourites Collection View Controller-->
         <scene sceneID="7YG-06-1i0">
             <objects>
-                <collectionViewController storyboardIdentifier="MKNFavouritesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5DL-wh-eZU" customClass="MKNFavouritesCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7VV-j8-2ht">
+                <collectionViewController storyboardIdentifier="MKNFavouritesCollectionViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="currentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5DL-wh-eZU" customClass="MKNFavouritesCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" dataMode="prototypes" id="7VV-j8-2ht">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.46656723009662837" green="1" blue="0.46210280872210263" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EbI-SI-5xD">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="90" minY="90" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="UzI-Kb-gg7">
@@ -316,6 +342,7 @@
                             <outlet property="delegate" destination="5DL-wh-eZU" id="usW-jr-2yk"/>
                         </connections>
                     </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b41-Hp-yvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
