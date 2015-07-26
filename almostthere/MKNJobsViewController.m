@@ -71,8 +71,10 @@
     return favsView;
 }
 
-
-
+- (CGPoint)offsetForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return CGPointMake(0, 45);
+}
 
 #pragma mark - DZNEmptyDataSetSource Methods
 
