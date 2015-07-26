@@ -50,9 +50,12 @@
     return cell;
 }
 
-- (IBAction)buttonTouched:(id)sender {
-    UIButton *button = (UIButton *)sender;
-    NSLog(@"I was touched");
-    NSLog(button.currentTitle);
+- (IBAction)buttonTouched:(id)sender {    
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:buttonPosition];
+    if (indexPath != nil)
+    {
+        NSLog(@"Der Wert lautet %@", [self.favs objectAtIndex:indexPath.row]) ;
+    }
 }
 @end
