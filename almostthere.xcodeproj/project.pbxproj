@@ -34,6 +34,7 @@
 		1FCEBA6D19CAC9D900411A29 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCEBA6C19CAC9D900411A29 /* libPods.a */; };
 		1FCEBA7019CADD4400411A29 /* MKNAddressSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6F19CADD4400411A29 /* MKNAddressSelectionController.m */; };
 		1FEBFD601B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBFD5F1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m */; };
+		1FFFB1F31B6B491E00011D40 /* FavsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFB1F21B6B491E00011D40 /* FavsView.xib */; };
 		8AC3752186E24A919C5AB97D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1617B5CD675C4AAD9D46DF9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		1FCEBA6F19CADD4400411A29 /* MKNAddressSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNAddressSelectionController.m; sourceTree = "<group>"; };
 		1FEBFD5E1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNFavouritesCollectionViewController.h; sourceTree = "<group>"; };
 		1FEBFD5F1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNFavouritesCollectionViewController.m; sourceTree = "<group>"; };
+		1FFFB1F21B6B491E00011D40 /* FavsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavsView.xib; sourceTree = "<group>"; };
 		4CE08C6D09EC6ADC55E95C1B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5D2E668E411F1D606F5436EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +183,7 @@
 				1FA1027A1933E69900BB70CB /* MKNContactsController.m */,
 				1FA1027C1933E69A00BB70CB /* MKNJobsViewController.h */,
 				1FA1027D1933E69A00BB70CB /* MKNJobsViewController.m */,
+				1FFFB1F21B6B491E00011D40 /* FavsView.xib */,
 				1FA1027F1933E69A00BB70CB /* Images.xcassets */,
 				1FA102681933E69700BB70CB /* Supporting Files */,
 				1FCEBA6E19CADD4400411A29 /* MKNAddressSelectionController.h */,
@@ -320,6 +323,7 @@
 			files = (
 				1FA102781933E69900BB70CB /* Main_iPad.storyboard in Resources */,
 				1FA102801933E69A00BB70CB /* Images.xcassets in Resources */,
+				1FFFB1F31B6B491E00011D40 /* FavsView.xib in Resources */,
 				1FA102751933E69900BB70CB /* Main_iPhone.storyboard in Resources */,
 				1FA1026C1933E69800BB70CB /* InfoPlist.strings in Resources */,
 			);

@@ -12,7 +12,4 @@
 
 @property (strong) NSMutableArray *favs;
 
-- (IBAction)buttonTouched:(id)sender;
-
-
 @end
