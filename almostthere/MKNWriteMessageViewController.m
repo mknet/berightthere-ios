@@ -7,14 +7,17 @@
 //
 
 #import "MKNWriteMessageViewController.h"
+#import "MKNAlmostThereJob.h"
+#import "MKNSelectMessageTypeTableViewController.h"
 
 @interface MKNWriteMessageViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UITextView *message;
-@property (weak, nonatomic) IBOutlet UILabel *longitude;
+@property (weak, nonatomic) IBOutlet UITextView *messageText;
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UIPickerView *messageTypePicker;
 
-@property (strong) NSString *contactName;
+- (IBAction)createJob:(id)sender;
 
 @end
 
@@ -33,28 +36,53 @@
 {
     [super viewDidLoad];
     
-    self.name.text = self.contactName;
+    self.name.text = self.message.recipient;
+    self.address.text = self.message.address;
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.message addObserver:self forKeyPath:@"coordinate" options:0 context:NULL];
+    
+    if (self.message.messageType == MKNAlmostThereMessageTypeMail) {
+        [self.messageTypeButton setTitle:@"Mail" forState:UIControlStateNormal];
+    } else if (self.message.messageType == MKNAlmostThereMessageTypeSms) {
+        [self.messageTypeButton setTitle:@"SMS" forState:UIControlStateNormal];
+    }
+    
+    
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [self.message removeObserver:self forKeyPath:@"coordinate"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqual:@"coordinate"]) {
+        //self.address.text = [NSString stringWithFormat:@"%f", self.message.coordinate.longitude];
+    }
+}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (IBAction)createJob:(id)sender {
+    
+}
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+    if ([[segue identifier] isEqualToString:@"selectMessageType"]) {
 
-- (void)showLongitude:(double)longitude {
-    self.longitude.text = [NSString stringWithFormat:@"%f", longitude];
+        MKNSelectMessageTypeTableViewController *selectMessageTypeController = segue.destinationViewController;
+        [selectMessageTypeController setJob:self.message];
+    }
 }
 
 @end

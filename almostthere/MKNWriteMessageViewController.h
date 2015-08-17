@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MKNAlmostThereJob.h"
 
 @interface MKNWriteMessageViewController : UIViewController
 
--(void)setContactName:(NSString*)name;
--(void)showLongitude:(double)longitude;
+@property (strong) MKNAlmostThereJob *message;
+@property (weak, nonatomic) IBOutlet UIButton *messageTypeButton;
 
 @end

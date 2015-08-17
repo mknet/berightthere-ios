@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F6840581B75D00000693607 /* MKNSelectMessageTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6840571B75D00000693607 /* MKNSelectMessageTypeTableViewController.m */; };
 		1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */; };
 		1F8EA0121A03CA0500CA8B70 /* MKNJobsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */; };
 		1F8EA0141A03CB4B00CA8B70 /* MKNJobManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0131A03CB4B00CA8B70 /* MKNJobManagerTest.m */; };
@@ -35,6 +36,7 @@
 		1FCEBA7019CADD4400411A29 /* MKNAddressSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6F19CADD4400411A29 /* MKNAddressSelectionController.m */; };
 		1FEBFD601B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBFD5F1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m */; };
 		1FFFB1F31B6B491E00011D40 /* FavsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFB1F21B6B491E00011D40 /* FavsView.xib */; };
+		1FFFB1FE1B6C19B800011D40 /* MKNAlmostThereJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFB1FD1B6C19B800011D40 /* MKNAlmostThereJob.m */; };
 		8AC3752186E24A919C5AB97D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1617B5CD675C4AAD9D46DF9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		1617B5CD675C4AAD9D46DF9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6840561B75D00000693607 /* MKNSelectMessageTypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNSelectMessageTypeTableViewController.h; sourceTree = "<group>"; };
+		1F6840571B75D00000693607 /* MKNSelectMessageTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNSelectMessageTypeTableViewController.m; sourceTree = "<group>"; };
 		1F75D32B197C16AC0025EB64 /* MKNWriteMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNWriteMessageViewController.h; sourceTree = "<group>"; };
 		1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNWriteMessageViewController.m; sourceTree = "<group>"; };
 		1F8EA0101A03CA0500CA8B70 /* MKNJobsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNJobsManager.h; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		1FEBFD5E1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNFavouritesCollectionViewController.h; sourceTree = "<group>"; };
 		1FEBFD5F1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNFavouritesCollectionViewController.m; sourceTree = "<group>"; };
 		1FFFB1F21B6B491E00011D40 /* FavsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavsView.xib; sourceTree = "<group>"; };
+		1FFFB1FC1B6C19B800011D40 /* MKNAlmostThereJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNAlmostThereJob.h; sourceTree = "<group>"; };
+		1FFFB1FD1B6C19B800011D40 /* MKNAlmostThereJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNAlmostThereJob.m; sourceTree = "<group>"; };
 		4CE08C6D09EC6ADC55E95C1B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5D2E668E411F1D606F5436EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +177,7 @@
 		1FA102671933E69700BB70CB /* almostthere */ = {
 			isa = PBXGroup;
 			children = (
+				1FFFB1F41B6C165C00011D40 /* Model */,
 				1FEBFD581B50FAFD00AA4B33 /* InitialView */,
 				1F75D32B197C16AC0025EB64 /* MKNWriteMessageViewController.h */,
 				1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */,
@@ -188,6 +195,8 @@
 				1FA102681933E69700BB70CB /* Supporting Files */,
 				1FCEBA6E19CADD4400411A29 /* MKNAddressSelectionController.h */,
 				1FCEBA6F19CADD4400411A29 /* MKNAddressSelectionController.m */,
+				1F6840561B75D00000693607 /* MKNSelectMessageTypeTableViewController.h */,
+				1F6840571B75D00000693607 /* MKNSelectMessageTypeTableViewController.m */,
 			);
 			path = almostthere;
 			sourceTree = "<group>";
@@ -231,6 +240,15 @@
 				1FEBFD5F1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m */,
 			);
 			name = InitialView;
+			sourceTree = "<group>";
+		};
+		1FFFB1F41B6C165C00011D40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFB1FC1B6C19B800011D40 /* MKNAlmostThereJob.h */,
+				1FFFB1FD1B6C19B800011D40 /* MKNAlmostThereJob.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		3D38C6F85F7E1027D8B718B8 /* Pods */ = {
@@ -381,11 +399,13 @@
 				1FA1026E1933E69800BB70CB /* main.m in Sources */,
 				1F9A17411949922500606E65 /* MKNGeoFenceManager.m in Sources */,
 				1FA1027E1933E69A00BB70CB /* MKNJobsViewController.m in Sources */,
+				1F6840581B75D00000693607 /* MKNSelectMessageTypeTableViewController.m in Sources */,
 				1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */,
 				1FEBFD601B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m in Sources */,
 				1FA102721933E69800BB70CB /* MKNAppDelegate.m in Sources */,
 				1FCEBA6919CAC22B00411A29 /* MKNContactsManager.m in Sources */,
 				1F8EA0121A03CA0500CA8B70 /* MKNJobsManager.m in Sources */,
+				1FFFB1FE1B6C19B800011D40 /* MKNAlmostThereJob.m in Sources */,
 				1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

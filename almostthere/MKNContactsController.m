@@ -11,6 +11,7 @@
 #import "MKNContactsController.h"
 #import "MKNAppDelegate.h"
 #import "MKNWriteMessageViewController.h"
+#import "MKNAlmostThereJob.h"
 
 #import <RHAddressBook/AddressBook.h>
 
@@ -140,8 +141,11 @@
          NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
          RHPerson *person = self.contacts[indexPath.row];
          
-         MKNWriteMessageViewController *destinationController = segue.destinationViewController;
-         [destinationController setContactName: person.name];
+         MKNAlmostThereJob *message = [[MKNAlmostThereJob alloc] init];
+         message.recipient = person.name;
+         
+         MKNWriteMessageViewController *writeMessageController = segue.destinationViewController;
+         [writeMessageController setMessage:message];
          
          //TODO Extract address extraction code
          
@@ -159,6 +163,8 @@
                                     [firstAddress objectForKey:@"City"],
                                     [firstAddress objectForKey:@"Country"]
                                     ];
+             
+         message.address = addressString;
          
          CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
          
@@ -180,10 +186,7 @@
                  } else {
                      CLPlacemark *placemark = placemarks[0]; // first placemark found
                      
-                     CLLocationDegrees latitude = placemark.location.coordinate.latitude;
-                     CLLocationDegrees longitude = placemark.location.coordinate.longitude;
-                     
-                     [destinationController showLongitude: longitude];
+                     message.coordinate = placemark.location.coordinate;
                  }
              });
          }];
