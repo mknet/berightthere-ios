@@ -45,13 +45,15 @@
 {
     [self.message addObserver:self forKeyPath:@"coordinate" options:0 context:NULL];
     
+    NSString *buttonText;
+    
     if (self.message.messageType == MKNAlmostThereMessageTypeMail) {
-        [self.messageTypeButton setTitle:@"Mail" forState:UIControlStateNormal];
+        buttonText = [NSString stringWithFormat:@"Mail - %@", self.message.recipientMailAddress];
     } else if (self.message.messageType == MKNAlmostThereMessageTypeSms) {
-        [self.messageTypeButton setTitle:@"SMS" forState:UIControlStateNormal];
+        buttonText = [NSString stringWithFormat:@"SMS - %@", self.message.recipientMailAddress];
     }
     
-    
+    [self.messageTypeButton setTitle:buttonText forState:UIControlStateNormal];
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -81,8 +83,14 @@
     if ([[segue identifier] isEqualToString:@"selectMessageType"]) {
 
         MKNSelectMessageTypeTableViewController *selectMessageTypeController = segue.destinationViewController;
-        [selectMessageTypeController setJob:self.message];
+        selectMessageTypeController.delegate = self;
     }
+}
+
+-(void) addItemViewController:(MKNSelectMessageTypeTableViewController *)controller didSelectMessageType:(MKNAlmostThereMessageType)messageType AndAdress:(NSString *)adress
+{
+    self.message.messageType = messageType;
+    self.message.recipientMailAddress = adress;
 }
 
 @end

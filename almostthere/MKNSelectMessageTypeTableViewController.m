@@ -12,9 +12,6 @@
     NSDictionary *messageTypes;
     NSArray *sectionTitles;
 }
-
-
-
 @end
 
 
@@ -75,17 +72,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *sectionTitle = [sectionTitles objectAtIndex:indexPath.section];
+    NSArray *sectionMessageType = [messageTypes objectForKey:sectionTitle];
+    NSString *address = [sectionMessageType objectAtIndex:indexPath.row];
+    
     NSLog(@"Message Type %@", sectionTitle);
     
+    MKNAlmostThereMessageType messageType;
+    
     if ([sectionTitle isEqualToString:@"Mail"]) {
-        self.job.messageType = MKNAlmostThereMessageTypeMail;
+        messageType = MKNAlmostThereMessageTypeMail;
     } else {
-        self.job.messageType = MKNAlmostThereMessageTypeSms;
+        messageType = MKNAlmostThereMessageTypeSms;
     }
     
-    [self dismissViewControllerAnimated:true completion:^{
-        //
-    }];
+    [self.delegate addItemViewController:self didSelectMessageType:messageType AndAdress:address];
+    
+    [self dismissViewControllerAnimated:true completion:nil];
     
 }
 

@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MKNAlmostThereJob.h"
 
+@class MKNSelectMessageTypeTableViewController;
+
+@protocol MKNSelectMessageTypeDelegate <NSObject>
+- (void)addItemViewController:(MKNSelectMessageTypeTableViewController *)controller didSelectMessageType:(MKNAlmostThereMessageType)messageType AndAdress: (NSString *)adress;
+@end
+
 @interface MKNSelectMessageTypeTableViewController : UITableViewController
 
-@property (strong) MKNAlmostThereJob *job;
+@property (nonatomic, strong) id <MKNSelectMessageTypeDelegate> delegate;
 
 @end

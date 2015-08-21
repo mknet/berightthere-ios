@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MKNAlmostThereJob.h"
+#import "MKNSelectMessageTypeTableViewController.h"
 
-@interface MKNWriteMessageViewController : UIViewController
+@interface MKNWriteMessageViewController : UIViewController <MKNSelectMessageTypeDelegate>
 
 @property (strong) MKNAlmostThereJob *message;
 @property (weak, nonatomic) IBOutlet UIButton *messageTypeButton;
