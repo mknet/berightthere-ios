@@ -10,7 +10,7 @@
 
 @interface MKNFavouritesCollectionViewController : UICollectionViewController
 
-@property (strong) NSMutableArray *favs;
+@property (strong) NSArray *favs;
 
 - (IBAction)favTapped:(id)sender;
 

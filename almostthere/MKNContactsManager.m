@@ -36,4 +36,9 @@
     return result;
 }
 
+- (NSArray*)favourites
+{
+    return [self.addressBook peopleOrderedByFirstName];
+}
+
 @end

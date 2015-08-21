@@ -13,5 +13,6 @@
 
 - (id)initWithRHAddressBook:(RHAddressBook *)ab;
 - (NSArray*)peopleWithAtLeastOneAdress;
+- (NSArray*)favourites;
 
 @end

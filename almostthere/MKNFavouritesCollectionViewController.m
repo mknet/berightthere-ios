@@ -7,24 +7,18 @@
 //
 
 #import "MKNFavouritesCollectionViewController.h"
+#import "MKNContactsManager.h"
+#import "MKNAppDelegate.h"
 
 @implementation MKNFavouritesCollectionViewController
 
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    self.favs = [[NSMutableArray alloc] init];
+    MKNAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    MKNContactsManager *contactsManager = appDelegate.contactsManager;
     
-    [self.favs addObject:@"Eins"];
-    [self.favs addObject:@"Zwo"];
-    [self.favs addObject:@"Drei"];
-    [self.favs addObject:@"Vier"];
-    [self.favs addObject:@"Fünf"];
-    [self.favs addObject:@"Eins"];
-    [self.favs addObject:@"Zwo"];
-    [self.favs addObject:@"Drei"];
-    [self.favs addObject:@"Vier"];
-    [self.favs addObject:@"Fünf"];
+    self.favs = contactsManager.favourites;
 }
 
 #pragma mark CollectionView methods

@@ -52,9 +52,7 @@
 
 - (void)closeView:(id)sender
 {
-    [self dismissViewControllerAnimated:true completion:^{
-        //
-    }];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
