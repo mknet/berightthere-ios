@@ -9,6 +9,7 @@
 #import "MKNFavouritesCollectionViewController.h"
 #import "MKNContactsManager.h"
 #import "MKNAppDelegate.h"
+#import "RHPerson.h"
 
 @implementation MKNFavouritesCollectionViewController
 
@@ -36,8 +37,10 @@
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
+    RHPerson *person = [self.favs objectAtIndex:indexPath.row];
+    
     UIButton *button = (UIButton *)[cell viewWithTag:100];
-    UIImage *image = [UIImage imageNamed:@"hanna"];
+    UIImage *image = person.originalImage;
     [button setImage:image forState:UIControlStateNormal];
     
     [cell.layer setBorderColor:[UIColor grayColor].CGColor];
@@ -52,7 +55,8 @@
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:buttonPosition];
     if (indexPath != nil)
     {
-        NSLog(@"Der Wert lautet %@", [self.favs objectAtIndex:indexPath.row]) ;
+        RHPerson *person = [self.favs objectAtIndex:indexPath.row];
+        NSLog(@"Der Wert lautet %@", person);
     }
 
 }
