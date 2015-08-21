@@ -12,4 +12,6 @@
 
 @property (strong) NSMutableArray *favs;
 
+- (IBAction)favTapped:(id)sender;
+
 @end

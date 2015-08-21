@@ -42,15 +42,25 @@
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+    UIButton *button = (UIButton *)[cell viewWithTag:100];
     UIImage *image = [UIImage imageNamed:@"hanna"];
-    [imageView setImage:image];
+    [button setImage:image forState:UIControlStateNormal];
     
-//    [cell.layer setBorderWidth:2.0f];
-//    [cell.layer setBorderColor:[UIColor grayColor].CGColor];
+    [cell.layer setBorderColor:[UIColor grayColor].CGColor];
     [cell.layer setCornerRadius:25.0f];
     
     return cell;
+}
+
+- (IBAction)favTapped:(id)sender
+{
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:buttonPosition];
+    if (indexPath != nil)
+    {
+        NSLog(@"Der Wert lautet %@", [self.favs objectAtIndex:indexPath.row]) ;
+    }
+
 }
 
 @end
