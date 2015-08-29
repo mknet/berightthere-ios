@@ -48,9 +48,9 @@
     NSString *buttonText;
     
     if (self.message.messageType == MKNAlmostThereMessageTypeMail) {
-        buttonText = [NSString stringWithFormat:@"Mail - %@", self.message.recipientMailAddress];
+        buttonText = [NSString stringWithFormat:@"Mail - %@", self.message.recipientAddress];
     } else if (self.message.messageType == MKNAlmostThereMessageTypeSms) {
-        buttonText = [NSString stringWithFormat:@"SMS - %@", self.message.recipientMailAddress];
+        buttonText = [NSString stringWithFormat:@"SMS - %@", self.message.recipientAddress];
     }
     
     [self.messageTypeButton setTitle:buttonText forState:UIControlStateNormal];
@@ -90,7 +90,7 @@
 -(void) addItemViewController:(MKNSelectMessageTypeTableViewController *)controller didSelectMessageType:(MKNAlmostThereMessageType)messageType AndAdress:(NSString *)adress
 {
     self.message.messageType = messageType;
-    self.message.recipientMailAddress = adress;
+    self.message.recipientAddress = adress;
 }
 
 @end
