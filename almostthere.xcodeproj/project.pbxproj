@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3407461B926850001641AF /* MKNCoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3407451B926850001641AF /* MKNCoreDataTest.m */; };
 		1F6840581B75D00000693607 /* MKNSelectMessageTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6840571B75D00000693607 /* MKNSelectMessageTypeTableViewController.m */; };
 		1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */; };
 		1F8EA0121A03CA0500CA8B70 /* MKNJobsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */; };
-		1F8EA0141A03CB4B00CA8B70 /* MKNJobManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0131A03CB4B00CA8B70 /* MKNJobManagerTest.m */; };
 		1F906C3C1B9198280045BCB1 /* MKNAlmostThereJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F906C3B1B9198280045BCB1 /* MKNAlmostThereJob.m */; };
 		1F9878421B8850BE00042F42 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F9878401B8850BE00042F42 /* Model.xcdatamodeld */; };
 		1F9A173D1949885B00606E65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9A173C1949885B00606E65 /* CoreLocation.framework */; };
@@ -27,14 +27,11 @@
 		1FA1027B1933E69900BB70CB /* MKNContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1027A1933E69900BB70CB /* MKNContactsController.m */; };
 		1FA1027E1933E69A00BB70CB /* MKNJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1027D1933E69A00BB70CB /* MKNJobsViewController.m */; };
 		1FA102801933E69A00BB70CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA1027F1933E69A00BB70CB /* Images.xcassets */; };
-		1FA102871933E69D00BB70CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102861933E69D00BB70CB /* XCTest.framework */; };
 		1FA102881933E69D00BB70CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102611933E69700BB70CB /* Foundation.framework */; };
 		1FA102891933E69D00BB70CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA102651933E69700BB70CB /* UIKit.framework */; };
 		1FA102911933E69E00BB70CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FA1028F1933E69E00BB70CB /* InfoPlist.strings */; };
 		1FA102931933E69E00BB70CB /* almostthereTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA102921933E69E00BB70CB /* almostthereTests.m */; };
 		1FCEBA6919CAC22B00411A29 /* MKNContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6819CAC22B00411A29 /* MKNContactsManager.m */; };
-		1FCEBA6B19CAC6D800411A29 /* MKNContactsManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6A19CAC6D800411A29 /* MKNContactsManagerTest.m */; };
-		1FCEBA6D19CAC9D900411A29 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCEBA6C19CAC9D900411A29 /* libPods.a */; };
 		1FCEBA7019CADD4400411A29 /* MKNAddressSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6F19CADD4400411A29 /* MKNAddressSelectionController.m */; };
 		1FEBFD601B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBFD5F1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m */; };
 		1FFFB1F31B6B491E00011D40 /* FavsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFB1F21B6B491E00011D40 /* FavsView.xib */; };
@@ -53,13 +50,16 @@
 
 /* Begin PBXFileReference section */
 		1617B5CD675C4AAD9D46DF9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3407451B926850001641AF /* MKNCoreDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNCoreDataTest.m; sourceTree = "<group>"; };
+		1F3407471B927C11001641AF /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		1F3407491B927D72001641AF /* libRHAddressBook.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRHAddressBook.a; path = "Pods/../build/Debug-iphoneos/libRHAddressBook.a"; sourceTree = "<group>"; };
+		1F34074B1B927EE4001641AF /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		1F6840561B75D00000693607 /* MKNSelectMessageTypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNSelectMessageTypeTableViewController.h; sourceTree = "<group>"; };
 		1F6840571B75D00000693607 /* MKNSelectMessageTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNSelectMessageTypeTableViewController.m; sourceTree = "<group>"; };
 		1F75D32B197C16AC0025EB64 /* MKNWriteMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNWriteMessageViewController.h; sourceTree = "<group>"; };
 		1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNWriteMessageViewController.m; sourceTree = "<group>"; };
 		1F8EA0101A03CA0500CA8B70 /* MKNJobsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNJobsManager.h; sourceTree = "<group>"; };
 		1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNJobsManager.m; sourceTree = "<group>"; };
-		1F8EA0131A03CB4B00CA8B70 /* MKNJobManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNJobManagerTest.m; sourceTree = "<group>"; };
 		1F906C3A1B9198280045BCB1 /* MKNAlmostThereJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKNAlmostThereJob.h; path = ../MKNAlmostThereJob.h; sourceTree = "<group>"; };
 		1F906C3B1B9198280045BCB1 /* MKNAlmostThereJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKNAlmostThereJob.m; path = ../MKNAlmostThereJob.m; sourceTree = "<group>"; };
 		1F9878411B8850BE00042F42 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -91,7 +91,6 @@
 		1FA102921933E69E00BB70CB /* almostthereTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = almostthereTests.m; sourceTree = "<group>"; };
 		1FCEBA6719CAC22B00411A29 /* MKNContactsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNContactsManager.h; sourceTree = "<group>"; };
 		1FCEBA6819CAC22B00411A29 /* MKNContactsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNContactsManager.m; sourceTree = "<group>"; };
-		1FCEBA6A19CAC6D800411A29 /* MKNContactsManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNContactsManagerTest.m; sourceTree = "<group>"; };
 		1FCEBA6C19CAC9D900411A29 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		1FCEBA6E19CADD4400411A29 /* MKNAddressSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNAddressSelectionController.h; sourceTree = "<group>"; };
 		1FCEBA6F19CADD4400411A29 /* MKNAddressSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNAddressSelectionController.m; sourceTree = "<group>"; };
@@ -119,10 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA102871933E69D00BB70CB /* XCTest.framework in Frameworks */,
 				1FA102891933E69D00BB70CB /* UIKit.framework in Frameworks */,
 				1FA102881933E69D00BB70CB /* Foundation.framework in Frameworks */,
-				1FCEBA6D19CAC9D900411A29 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +162,9 @@
 		1FA102601933E69700BB70CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F34074B1B927EE4001641AF /* libPods.a */,
+				1F3407491B927D72001641AF /* libRHAddressBook.a */,
+				1F3407471B927C11001641AF /* libPods.a */,
 				1FCEBA6C19CAC9D900411A29 /* libPods.a */,
 				1F9A173C1949885B00606E65 /* CoreLocation.framework */,
 				1FA102611933E69700BB70CB /* Foundation.framework */,
@@ -220,8 +220,7 @@
 				1FA102921933E69E00BB70CB /* almostthereTests.m */,
 				1FA1028D1933E69D00BB70CB /* Supporting Files */,
 				1F9A1742194BAE8500606E65 /* MKNGeoFenceManagerTest.m */,
-				1FCEBA6A19CAC6D800411A29 /* MKNContactsManagerTest.m */,
-				1F8EA0131A03CB4B00CA8B70 /* MKNJobManagerTest.m */,
+				1F3407451B926850001641AF /* MKNCoreDataTest.m */,
 			);
 			path = almostthereTests;
 			sourceTree = "<group>";
@@ -418,9 +417,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FCEBA6B19CAC6D800411A29 /* MKNContactsManagerTest.m in Sources */,
 				1F9A1743194BAE8500606E65 /* MKNGeoFenceManagerTest.m in Sources */,
-				1F8EA0141A03CB4B00CA8B70 /* MKNJobManagerTest.m in Sources */,
+				1F3407461B926850001641AF /* MKNCoreDataTest.m in Sources */,
 				1FA102931933E69E00BB70CB /* almostthereTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +590,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -614,6 +613,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
