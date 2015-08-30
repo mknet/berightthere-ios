@@ -139,7 +139,9 @@
          NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
          RHPerson *person = self.contacts[indexPath.row];
          
-         MKNAlmostThereJob *message = [[MKNAlmostThereJob alloc] init];
+         MKNAlmostThereJob *message = [NSEntityDescription
+                                       insertNewObjectForEntityForName:@"Job"
+                                       inManagedObjectContext:self.app.managedObjectContext];
          message.recipient = person.name;
          
          MKNWriteMessageViewController *writeMessageController = segue.destinationViewController;
