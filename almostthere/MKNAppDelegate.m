@@ -58,18 +58,20 @@
 - (void) initGeoFenceManager
 {
     CLLocationCoordinate2D coords;
-    coords.longitude=-0.1015987;
-    coords.latitude=51.5286416;
+    //coords.longitude=-0.13370000;
+    //coords.latitude=51.50998000;
     
-    CLLocationDistance radius = 5000.0;
+    coords.longitude=-0.049866;
+    coords.latitude=51.515546;
+
+    CLLocationDistance radius = 5.0;
     
     
     CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:coords
                                                                  radius:radius
-                                                             identifier:@"geofence"];
+                                                             identifier:@"London weiter draussen"];
     
     self.geofenceManager = [[MKNGeoFenceManager alloc] initWithRegion:region];
-    [self.geofenceManager startWatching];
 }
 
 - (void) initContactsManager

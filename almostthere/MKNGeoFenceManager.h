@@ -16,5 +16,5 @@
 - (void)stopWatching;
 - (void)startWatching;
 
-- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region;
+//- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region;
 @end

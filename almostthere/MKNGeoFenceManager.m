@@ -10,7 +10,7 @@
 
 @interface MKNGeoFenceManager ()
 
-@property (strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @property (strong) CLRegion *regionToWatch;
 
 @end
@@ -22,21 +22,27 @@
     self = [self init];
     self.regionToWatch = region;
     
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
     return self;
 }
 
-- (void)startWatching
-{
-    self.locationManager = [[CLLocationManager alloc] init];
-    [self.locationManager setDelegate:self];
+- (void)startWatching {
     
     //to get all results from the location manager
     [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
     
+    [self.locationManager requestAlwaysAuthorization];
+    
     //be accurate as possible
     [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
+    //[self.locationManager setPausesLocationUpdatesAutomatically:false];
+    self.locationManager.activityType = CLActivityTypeAutomotiveNavigation;
+    
     [self.locationManager startMonitoringForRegion:self.regionToWatch];
+    [self.locationManager startUpdatingLocation];
     
     NSLog(@"Monitored regions %@",self.locationManager.monitoredRegions);
 }
@@ -52,6 +58,7 @@
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
     NSLog(@"Du bist gleich da!");
+    //[self stopWatching];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
@@ -71,6 +78,15 @@
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
 {
     NSLog(@"Error : %@",error);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    NSLog(@"Neue Locations");
+    NSLog(@"%@",locations);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    NSLog(@"%d",status);
 }
 
 @end
