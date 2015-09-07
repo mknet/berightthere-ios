@@ -9,6 +9,7 @@
 #import "MKNWriteMessageViewController.h"
 #import "MKNAlmostThereJob.h"
 #import "MKNSelectMessageTypeTableViewController.h"
+#import "MKNAppDelegate.h"
 
 @interface MKNWriteMessageViewController ()
 
@@ -38,6 +39,8 @@
     
     self.name.text = self.message.recipient;
     self.address.text = self.message.address;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Speichern" style: UIBarButtonItemStyleDone target:self action:@selector(saveJob:)];
 
 }
 
@@ -74,7 +77,17 @@
 }
 
 - (IBAction)createJob:(id)sender {
+    //TODO Remove me?
+}
+
+- (void)saveJob:(id)sender
+{
+    MKNAppDelegate *app = [[UIApplication sharedApplication] delegate];
     
+    NSError *error;
+    if (![app.managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
 }
 
 

@@ -11,7 +11,10 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "MKNGeoFenceManager.h"
+#import "MKNAppDelegate.h"
 
 @interface MKNJobsViewController : UITableViewController <CLLocationManagerDelegate>
+
+@property MKNAppDelegate *app;
 
 @end

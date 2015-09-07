@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 Marcel Koch. All rights reserved.
 //
 
-#import "MKNJobsViewController.h"
-
 #import "UIScrollView+EmptyDataSet.h"
 
+#import "MKNJobsViewController.h"
 #import "MKNFavouritesCollectionViewController.h"
+#import "MKNAlmostThereJob.h"
 
 @interface MKNJobsViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
-@property (strong) NSMutableArray *jobs;
+@property (strong) NSArray *jobs;
 
 @property (strong) CLLocationManager *locationManager;
 @property (strong) CLRegion *testRegion;
@@ -32,7 +32,14 @@
 {
     [super viewDidLoad];
     
-    self.jobs = [NSMutableArray array];
+    self.app = [[UIApplication sharedApplication] delegate];
+    
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Job"
+                                              inManagedObjectContext:self.app.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    self.jobs = [self.app.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
@@ -41,6 +48,8 @@
     self.tableView.tableFooterView = [UIView new];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addJob:)];
+    
+    [self.app.geofenceManager startWatching];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,6 +61,28 @@
 - (void)addJob:(id)sender
 {
     [self performSegueWithIdentifier:@"addJob" sender:sender];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.jobs.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    MKNAlmostThereJob *job = [self.jobs objectAtIndex:indexPath.row];
+    cell.textLabel.text = job.recipient;
+    
+    return cell;
 }
 
 #pragma mark - DZNEmptyDataSetSource Methods
