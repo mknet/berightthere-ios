@@ -8,5 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MKNDeterminedGeolocationDelegate <NSObject>
+- (void)gotGeolocation:(CLLocationCoordinate2D) location;
+@end
+
 @interface MKNContactsController : UITableViewController
+
+@property (nonatomic, strong) id <MKNDeterminedGeolocationDelegate> delegate;
+
 @end

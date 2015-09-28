@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MKNAlmostThereJob.h"
 #import "MKNSelectMessageTypeTableViewController.h"
+#import "MKNContactsController.h"
 
-@interface MKNWriteMessageViewController : UIViewController <MKNSelectMessageTypeDelegate>
+@interface MKNWriteMessageViewController : UIViewController <MKNSelectMessageTypeDelegate, MKNDeterminedGeolocationDelegate>
 
 @property (strong) MKNAlmostThereJob *message;
 @property (weak, nonatomic) IBOutlet UIButton *messageTypeButton;
+@property (weak, nonatomic) IBOutlet UILabel *geoLocationLabel;
 
 @end

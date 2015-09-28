@@ -100,10 +100,17 @@
     }
 }
 
--(void) addItemViewController:(MKNSelectMessageTypeTableViewController *)controller didSelectMessageType:(MKNAlmostThereMessageType)messageType AndAdress:(NSString *)adress
+- (void) addItemViewController:(MKNSelectMessageTypeTableViewController *)controller didSelectMessageType:(MKNAlmostThereMessageType)messageType AndAdress:(NSString *)adress
 {
     self.message.messageType = messageType;
     self.message.recipientAddress = adress;
+}
+
+- (void)gotGeolocation:(CLLocationCoordinate2D)location
+{
+    self.message.coordinate = location;
+    
+    self.geoLocationLabel.text = [NSString stringWithFormat:@"%f %f", location.longitude, location.latitude];
 }
 
 @end

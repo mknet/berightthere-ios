@@ -131,12 +131,19 @@
                                     <segue destination="8ng-Lv-Y2K" kind="modal" identifier="selectMessageType" modalTransitionStyle="crossDissolve" id="Cl5-2N-Slg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noch keine Geo Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-K1-keb">
+                                <rect key="frame" x="16" y="440" width="263" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="w6X-Ar-TZO"/>
                     <connections>
                         <outlet property="address" destination="zWZ-83-Guv" id="cHa-Dh-Vza"/>
+                        <outlet property="geoLocationLabel" destination="Uhs-K1-keb" id="7MG-7d-X31"/>
                         <outlet property="messageTypeButton" destination="JWa-Us-5mZ" id="gPg-d5-qes"/>
                         <outlet property="name" destination="fak-E2-Nws" id="us8-m4-vj6"/>
                     </connections>

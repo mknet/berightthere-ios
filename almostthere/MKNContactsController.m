@@ -147,6 +147,8 @@
          MKNWriteMessageViewController *writeMessageController = segue.destinationViewController;
          [writeMessageController setMessage:message];
          
+         self.delegate = writeMessageController;
+         
          //TODO Extract address extraction code
          
          RHMultiValue *mv = [person addresses];
@@ -186,8 +188,7 @@
                      [alert show];
                  } else {
                      CLPlacemark *placemark = placemarks[0]; // first placemark found
-                     
-                     message.coordinate = placemark.location.coordinate;
+                     [self.delegate gotGeolocation:placemark.location.coordinate];
                  }
              });
          }];
