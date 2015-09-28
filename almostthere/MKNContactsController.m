@@ -158,8 +158,9 @@
          
          NSDictionary *firstAddress = [mv valueAtIndex:0];
          
-         NSString *addressString = [NSString stringWithFormat:@"%@ %@",
+         NSString *addressString = [NSString stringWithFormat:@"%@ %@ %@ %@",
                                     [firstAddress objectForKey:@"Street"],
+                                    [firstAddress objectForKey:@"ZIP"],
                                     [firstAddress objectForKey:@"City"],
                                     [firstAddress objectForKey:@"Country"]
                                     ];
