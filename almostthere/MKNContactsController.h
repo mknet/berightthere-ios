@@ -15,5 +15,6 @@
 @interface MKNContactsController : UITableViewController
 
 @property (nonatomic, strong) id <MKNDeterminedGeolocationDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

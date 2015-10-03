@@ -17,11 +17,12 @@
 
 #import "UIScrollView+EmptyDataSet.h"
 
-@interface MKNContactsController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
+@interface MKNContactsController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate>
 
 @property (strong) MKNAppDelegate *app;
 @property (strong) RHAddressBook *ab;
 @property (strong) NSArray *contacts;
+@property BOOL addressSearchActive;
 
 @end
 
@@ -47,6 +48,10 @@
     self.tableView.tableFooterView = [UIView new];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Fertig" style: UIBarButtonItemStyleDone target:self action:@selector(closeView:)];
+    
+    self.searchBar.delegate = self;
+    
+    self.addressSearchActive = NO;
 
 }
 
@@ -71,11 +76,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.contacts.count;
+    if (self.addressSearchActive) {
+        return 0;
+    } else {
+        return self.contacts.count;
+    }
+    
 }
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
+     if (self.addressSearchActive) {
+         return nil;
+     }
+     
      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
      
      RHPerson *person = self.contacts[indexPath.row];
@@ -288,5 +302,33 @@
 {
     
 }
+
+#pragma mark - SearchBar Methods
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    self.addressSearchActive = YES;
+    
+    [self.searchBar setShowsCancelButton:YES animated:YES];
+    
+    self.tableView.reloadData;
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    self.addressSearchActive = NO;
+    
+    self.tableView.reloadData;
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    self.addressSearchActive = NO;
+    
+    [self.searchBar setShowsCancelButton:NO animated:YES];
+    
+    [self.searchBar resignFirstResponder];
+    
+    self.tableView.reloadData;
+}
+
+
 
 @end
