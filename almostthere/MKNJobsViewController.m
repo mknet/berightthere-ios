@@ -24,6 +24,8 @@
 @property (strong) MKNFavouritesCollectionViewController *favsViewController;
 @property (strong) UICollectionView *favsView;
 
+@property (strong) UIView *viewBla;
+
 @end
 
 @implementation MKNJobsViewController
@@ -34,13 +36,6 @@
     
     self.app = [[UIApplication sharedApplication] delegate];
     
-    NSError *error;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Job"
-                                              inManagedObjectContext:self.app.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    self.jobs = [self.app.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
     
@@ -50,6 +45,27 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addJob:)];
     
     [self.app.geofenceManager startWatching];
+    
+    [self updateJobList];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self updateJobList];
+}
+
+- (void)viewDidAppear {
+    [self updateJobList];
+}
+
+- (void)updateJobList {
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Job"
+                                              inManagedObjectContext:self.app.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    self.jobs = [self.app.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,11 +111,11 @@
     NSString *viewControllerId = @"MKNFavouritesCollectionViewController";
     self.favsViewController = [storyboard instantiateViewControllerWithIdentifier:viewControllerId];
     
-    UIView *favsView = self.favsViewController.collectionView;
-    favsView.autoresizingMask = UIViewAutoresizingNone;
-    favsView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.favsView = self.favsViewController.collectionView;
+    self.favsView.autoresizingMask = UIViewAutoresizingNone;
+    self.favsView.translatesAutoresizingMaskIntoConstraints = NO;
     
-    return favsView;
+    return self.favsView;
 }
 
 - (CGPoint)offsetForEmptyDataSet:(UIScrollView *)scrollView

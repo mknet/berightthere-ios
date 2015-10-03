@@ -20,6 +20,7 @@
     MKNContactsManager *contactsManager = appDelegate.contactsManager;
     
     self.favs = contactsManager.favourites;
+
 }
 
 #pragma mark CollectionView methods
