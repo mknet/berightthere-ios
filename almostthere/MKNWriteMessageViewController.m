@@ -88,6 +88,8 @@
     if (![app.managedObjectContext save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
+    
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 

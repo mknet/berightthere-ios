@@ -128,7 +128,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8ng-Lv-Y2K" kind="modal" identifier="selectMessageType" modalTransitionStyle="crossDissolve" id="Cl5-2N-Slg"/>
+                                    <segue destination="8ng-Lv-Y2K" kind="popover" identifier="selectMessageType" popoverAnchorView="JWa-Us-5mZ" id="Cl5-2N-Slg">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noch keine Geo Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-K1-keb">
@@ -443,7 +445,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Opx-jN-8vK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8ng-Lv-Y2K" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overCurrentContext" navigationBarHidden="YES" id="8ng-Lv-Y2K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vX7-4y-qPt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
