@@ -87,6 +87,8 @@
      NSDictionary *firstAddress = [mv valueAtIndex:0];
      
      cell.detailTextLabel.text = [firstAddress objectForKey:@"Street"];
+     
+     cell.imageView.image = person.originalImage;
 
      return cell;
  }
