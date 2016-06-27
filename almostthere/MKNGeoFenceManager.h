@@ -12,9 +12,11 @@
 
 @interface MKNGeoFenceManager : NSObject <CLLocationManagerDelegate>
 
+- (id)initWithLocationManager:(CLLocationManager *)manager;
 - (id)initWithRegion:(CLRegion *)region;
 - (void)stopWatching;
-- (void)startWatching;
+- (void)startWatching:(CLRegion *)region;
+- (void)onInsideRegion:(CLRegion *)region;
 
 //- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region;
 @end

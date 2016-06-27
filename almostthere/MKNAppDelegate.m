@@ -55,15 +55,18 @@
     //coords.longitude=-0.13370000;
     //coords.latitude=51.50998000;
     
-    coords.longitude=-0.049866;
-    coords.latitude=51.515546;
+    coords.longitude=8.59578;
+    coords.latitude=50.24003;
 
-    CLLocationDistance radius = 5.0;
+    CLLocationDistance radius = 50.0;
     
     
     CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:coords
                                                                  radius:radius
-                                                             identifier:@"London weiter draussen"];
+                                                             identifier:@"Frankfurt"];
+    
+    region.notifyOnEntry = YES;
+    region.notifyOnExit = YES;
     
     self.geofenceManager = [[MKNGeoFenceManager alloc] initWithRegion:region];
 }

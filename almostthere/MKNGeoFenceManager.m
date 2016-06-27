@@ -17,23 +17,37 @@
 
 @implementation MKNGeoFenceManager
 
+- (id)initWithLocationManager:(CLLocationManager *)manager
+{
+    self = [self init];
+    self.locationManager = manager;
+    return self;
+}
+
 - (id)initWithRegion:(CLRegion *)region
 {
     self = [self init];
     self.regionToWatch = region;
     
     self.locationManager = [[CLLocationManager alloc] init];
+    
+    [self.locationManager requestAlwaysAuthorization];
+    
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        NSLog(@"Ich weiß gar nix");
+    }
+    
     self.locationManager.delegate = self;
     
     return self;
 }
 
-- (void)startWatching {
+- (void)startWatching:(CLRegion *)region {
     
     //to get all results from the location manager
     [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
-    
-    [self.locationManager requestAlwaysAuthorization];
     
     //be accurate as possible
     [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
@@ -42,7 +56,8 @@
     self.locationManager.activityType = CLActivityTypeAutomotiveNavigation;
     
     [self.locationManager startMonitoringForRegion:self.regionToWatch];
-    [self.locationManager startUpdatingLocation];
+    
+    [self.locationManager performSelector:@selector(requestStateForRegion:) withObject:self.regionToWatch afterDelay:1];
     
     NSLog(@"Monitored regions %@",self.locationManager.monitoredRegions);
 }
@@ -54,11 +69,15 @@
     self.regionToWatch = nil;
 }
 
+- (void)onInsideRegion:(CLRegion *)region
+{
+    NSLog(@"Du bist gleich in %@", region.identifier);
+}
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
-    NSLog(@"Du bist gleich da!");
-    //[self stopWatching];
+    [self onInsideRegion:region];
+    return;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
@@ -66,9 +85,21 @@
     NSLog(@"Ich gucke nach %@", region.identifier);
 }
 
-- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
-{
-     NSLog(@"Ich habe %f", region.center.latitude);
+- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region {
+    
+    if (state == CLRegionStateInside){
+        [self onInsideRegion:region];
+        return;
+        
+    } else if (state == CLRegionStateOutside){
+        NSLog(@"Outside geofence: %@", region.identifier);
+        return;
+        
+    } else if (state == CLRegionStateUnknown){
+        NSLog(@"Unknown state for geofence: %@", region.identifier);
+        return;
+    }
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -77,7 +108,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
 {
-    NSLog(@"Error : %@",error);
+    NSLog(@"Failed Monitoring : %@",error);
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

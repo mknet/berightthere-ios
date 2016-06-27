@@ -7,18 +7,26 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+
 #import "MKNGeoFenceManager.h"
 
 @interface MKNGeoFenceManagerTest : XCTestCase
+
+@property (strong) MKNGeoFenceManager *manager;
 
 @end
 
 @implementation MKNGeoFenceManagerTest
 
+id mockManager;
+
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    mockManager = OCMClassMock([CLLocationManager class]);
+    self.manager = [[MKNGeoFenceManager alloc] initWithLocationManager:mockManager];
 }
 
 - (void)tearDown
@@ -34,27 +42,38 @@
     
 }
 
-
-- (void)xxxtestExample
+- (void)testStartWatching
 {
-    NSLog(@"MK Test startet!");
-    
     CLLocationCoordinate2D coords;
     coords.longitude=8.783666797422859;
     coords.latitude=50.0488850458406;
     
     CLLocationDistance radius = 500.0;
     
+    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:coords
+                                                                 radius:radius
+                                                             identifier:@"heusenstamm"];
+    [self.manager startWatching:region];
+    
+    OCMVerify([mockManager startMonitoringForRegion:[OCMArg any]]);
+    OCMVerify([mockManager setDesiredAccuracy:kCLLocationAccuracyBest]);
+}
+
+- (void)testOnInsideRegion
+{
+    CLLocationCoordinate2D coords;
+    coords.longitude=8.783666797422859;
+    coords.latitude=50.0488850458406;
+    
+    CLLocationDistance radius = 500.0;
     
     CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:coords
                                                                  radius:radius
                                                              identifier:@"heusenstamm"];
     
-    MKNGeoFenceManager *manager = [[MKNGeoFenceManager alloc] initWithRegion:region];
+    [self.manager locationManager:mockManager didEnterRegion:region];
     
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-    
-    [manager locationManager:locationManager didEnterRegion:region];
+    OCMVerify([self.manager onInsideRegion:region]);
 }
 
 @end

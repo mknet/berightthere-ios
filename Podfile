@@ -1,5 +1,11 @@
 platform :ios, '7.0'
-pod 'RHAddressBook', '~> 1.1'
-pod 'DZNEmptyDataSet'
 
-link_with 'almostthere', 'almostthereTests'
+target 'almostthere' do
+    pod 'RHAddressBook', '~> 1.1'
+    pod 'DZNEmptyDataSet'
+    
+    target 'almostthereTests' do
+        pod 'OCMock'
+    end
+end
+

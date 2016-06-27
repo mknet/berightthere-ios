@@ -11,7 +11,7 @@
 #import "MKNSelectMessageTypeTableViewController.h"
 #import "MKNContactsController.h"
 
-@interface MKNWriteMessageViewController : UIViewController <MKNSelectMessageTypeDelegate, MKNDeterminedGeolocationDelegate>
+@interface MKNWriteMessageViewController : UIViewController <MKNSelectMessageTypeDelegate, MKNDeterminedGeolocationDelegate, UIViewControllerTransitioningDelegate>
 
 @property (strong) MKNAlmostThereJob *message;
 @property (weak, nonatomic) IBOutlet UIButton *messageTypeButton;

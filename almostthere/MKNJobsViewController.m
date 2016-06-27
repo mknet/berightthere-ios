@@ -44,7 +44,7 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addJob:)];
     
-    [self.app.geofenceManager startWatching];
+    [self.app.geofenceManager startWatching:NULL];
     
     [self updateJobList];
 }

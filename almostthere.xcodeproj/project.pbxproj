@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F0BAF671B92F62300AE162E /* MKNContactsManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0BAF651B92F62300AE162E /* MKNContactsManagerTest.m */; };
 		1F0BAF681B92F62300AE162E /* MKNJobManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0BAF661B92F62300AE162E /* MKNJobManagerTest.m */; };
-		1F0BAF6A1B92F67A00AE162E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0BAF691B92F67A00AE162E /* libPods.a */; };
 		1F3407461B926850001641AF /* MKNCoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3407451B926850001641AF /* MKNCoreDataTest.m */; };
 		1F6840581B75D00000693607 /* MKNSelectMessageTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6840571B75D00000693607 /* MKNSelectMessageTypeTableViewController.m */; };
 		1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */; };
@@ -37,7 +36,8 @@
 		1FCEBA6919CAC22B00411A29 /* MKNContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6819CAC22B00411A29 /* MKNContactsManager.m */; };
 		1FCEBA7019CADD4400411A29 /* MKNAddressSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEBA6F19CADD4400411A29 /* MKNAddressSelectionController.m */; };
 		1FEBFD601B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBFD5F1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m */; };
-		8AC3752186E24A919C5AB97D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1617B5CD675C4AAD9D46DF9B /* libPods.a */; };
+		86A1521F225111A7AF89A78C /* libPods-almostthere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 981B16A335DCB6CA8677880E /* libPods-almostthere.a */; };
+		C46B8E180A32F7B2237C9318 /* libPods-almostthere-almostthereTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 100F590DEC7F3CECF97BE14B /* libPods-almostthere-almostthereTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1617B5CD675C4AAD9D46DF9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		043F5DD5885CB207E9390E1E /* Pods-almostthere-almostthereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-almostthere-almostthereTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-almostthere-almostthereTests/Pods-almostthere-almostthereTests.debug.xcconfig"; sourceTree = "<group>"; };
+		100F590DEC7F3CECF97BE14B /* libPods-almostthere-almostthereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-almostthere-almostthereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0BAF651B92F62300AE162E /* MKNContactsManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNContactsManagerTest.m; sourceTree = "<group>"; };
 		1F0BAF661B92F62300AE162E /* MKNJobManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNJobManagerTest.m; sourceTree = "<group>"; };
 		1F0BAF691B92F67A00AE162E /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
@@ -101,8 +102,10 @@
 		1FCEBA6F19CADD4400411A29 /* MKNAddressSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNAddressSelectionController.m; sourceTree = "<group>"; };
 		1FEBFD5E1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNFavouritesCollectionViewController.h; sourceTree = "<group>"; };
 		1FEBFD5F1B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNFavouritesCollectionViewController.m; sourceTree = "<group>"; };
-		4CE08C6D09EC6ADC55E95C1B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		5D2E668E411F1D606F5436EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		27744234F8EA6B0537EA101A /* Pods-almostthere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-almostthere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-almostthere/Pods-almostthere.debug.xcconfig"; sourceTree = "<group>"; };
+		56568F06FC7542DE8B26B26F /* Pods-almostthere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-almostthere.release.xcconfig"; path = "Pods/Target Support Files/Pods-almostthere/Pods-almostthere.release.xcconfig"; sourceTree = "<group>"; };
+		981B16A335DCB6CA8677880E /* libPods-almostthere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-almostthere.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA890B3308AC10EF039FE5F2 /* Pods-almostthere-almostthereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-almostthere-almostthereTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-almostthere-almostthereTests/Pods-almostthere-almostthereTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +117,7 @@
 				1FA102641933E69700BB70CB /* CoreGraphics.framework in Frameworks */,
 				1FA102661933E69700BB70CB /* UIKit.framework in Frameworks */,
 				1FA102621933E69700BB70CB /* Foundation.framework in Frameworks */,
-				8AC3752186E24A919C5AB97D /* libPods.a in Frameworks */,
+				86A1521F225111A7AF89A78C /* libPods-almostthere.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,9 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F0BAF6A1B92F67A00AE162E /* libPods.a in Frameworks */,
 				1FA102891933E69D00BB70CB /* UIKit.framework in Frameworks */,
 				1FA102881933E69D00BB70CB /* Foundation.framework in Frameworks */,
+				C46B8E180A32F7B2237C9318 /* libPods-almostthere-almostthereTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +154,7 @@
 				1FA1028C1933E69D00BB70CB /* almostthereTests */,
 				1FA102601933E69700BB70CB /* Frameworks */,
 				1FA1025F1933E69700BB70CB /* Products */,
-				3D38C6F85F7E1027D8B718B8 /* Pods */,
+				E5198FBF21969E6D31202E1A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,7 +180,8 @@
 				1FA102631933E69700BB70CB /* CoreGraphics.framework */,
 				1FA102651933E69700BB70CB /* UIKit.framework */,
 				1FA102861933E69D00BB70CB /* XCTest.framework */,
-				1617B5CD675C4AAD9D46DF9B /* libPods.a */,
+				981B16A335DCB6CA8677880E /* libPods-almostthere.a */,
+				100F590DEC7F3CECF97BE14B /* libPods-almostthere-almostthereTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -260,11 +264,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		3D38C6F85F7E1027D8B718B8 /* Pods */ = {
+		E5198FBF21969E6D31202E1A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D2E668E411F1D606F5436EF /* Pods.debug.xcconfig */,
-				4CE08C6D09EC6ADC55E95C1B /* Pods.release.xcconfig */,
+				27744234F8EA6B0537EA101A /* Pods-almostthere.debug.xcconfig */,
+				56568F06FC7542DE8B26B26F /* Pods-almostthere.release.xcconfig */,
+				043F5DD5885CB207E9390E1E /* Pods-almostthere-almostthereTests.debug.xcconfig */,
+				AA890B3308AC10EF039FE5F2 /* Pods-almostthere-almostthereTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -276,11 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA102961933E69E00BB70CB /* Build configuration list for PBXNativeTarget "almostthere" */;
 			buildPhases = (
-				F642BC590A6E45E894034DA6 /* Check Pods Manifest.lock */,
+				DD4D6889B11414930116B81F /* 📦 Check Pods Manifest.lock */,
 				1FA1025A1933E69600BB70CB /* Sources */,
 				1FA1025B1933E69600BB70CB /* Frameworks */,
 				1FA1025C1933E69600BB70CB /* Resources */,
-				B5BDDEBCFDD34A8585AA31BC /* Copy Pods Resources */,
+				EA3CA6CE5C903CE0C2F619F5 /* 📦 Embed Pods Frameworks */,
+				83ED6B299BD0DA3EDFF8E9FD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,9 +302,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FA102991933E69E00BB70CB /* Build configuration list for PBXNativeTarget "almostthereTests" */;
 			buildPhases = (
+				966AD9350671E2F44E22D74B /* 📦 Check Pods Manifest.lock */,
 				1FA102811933E69D00BB70CB /* Sources */,
 				1FA102821933E69D00BB70CB /* Frameworks */,
 				1FA102831933E69D00BB70CB /* Resources */,
+				8981B9F9790A4DF6284DD877 /* 📦 Embed Pods Frameworks */,
+				25BBBA9CC10D1EE861354875 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,34 +379,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B5BDDEBCFDD34A8585AA31BC /* Copy Pods Resources */ = {
+		25BBBA9CC10D1EE861354875 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-almostthere-almostthereTests/Pods-almostthere-almostthereTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F642BC590A6E45E894034DA6 /* Check Pods Manifest.lock */ = {
+		83ED6B299BD0DA3EDFF8E9FD /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-almostthere/Pods-almostthere-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8981B9F9790A4DF6284DD877 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-almostthere-almostthereTests/Pods-almostthere-almostthereTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		966AD9350671E2F44E22D74B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DD4D6889B11414930116B81F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA3CA6CE5C903CE0C2F619F5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-almostthere/Pods-almostthere-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -555,7 +625,7 @@
 		};
 		1FA102971933E69E00BB70CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D2E668E411F1D606F5436EF /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 27744234F8EA6B0537EA101A /* Pods-almostthere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -574,7 +644,7 @@
 		};
 		1FA102981933E69E00BB70CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CE08C6D09EC6ADC55E95C1B /* Pods.release.xcconfig */;
+			baseConfigurationReference = 56568F06FC7542DE8B26B26F /* Pods-almostthere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -593,7 +663,7 @@
 		};
 		1FA1029A1933E69E00BB70CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D2E668E411F1D606F5436EF /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 043F5DD5885CB207E9390E1E /* Pods-almostthere-almostthereTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/almostthere.app/almostthere";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -622,7 +692,7 @@
 		};
 		1FA1029B1933E69E00BB70CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CE08C6D09EC6ADC55E95C1B /* Pods.release.xcconfig */;
+			baseConfigurationReference = AA890B3308AC10EF039FE5F2 /* Pods-almostthere-almostthereTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/almostthere.app/almostthere";
 				FRAMEWORK_SEARCH_PATHS = (

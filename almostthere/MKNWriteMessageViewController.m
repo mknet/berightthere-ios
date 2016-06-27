@@ -41,6 +41,7 @@
     self.address.text = self.message.address;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Speichern" style: UIBarButtonItemStyleDone target:self action:@selector(saveJob:)];
+    
 
 }
 
@@ -102,6 +103,23 @@
     }
 }
 
++ (void)setPresentationStyleForSelfController:(UIViewController *)selfController presentingController:(UIViewController *)presentingController
+{
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)])
+    {
+        //iOS 8.0 and above
+        presentingController.providesPresentationContextTransitionStyle = YES;
+        presentingController.definesPresentationContext = YES;
+        
+        [presentingController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    }
+    else
+    {
+        [selfController setModalPresentationStyle:UIModalPresentationCurrentContext];
+        [selfController.navigationController setModalPresentationStyle:UIModalPresentationCurrentContext];
+    }
+}
+
 - (void) addItemViewController:(MKNSelectMessageTypeTableViewController *)controller didSelectMessageType:(MKNAlmostThereMessageType)messageType AndAdress:(NSString *)adress
 {
     self.message.messageType = messageType;
@@ -114,5 +132,6 @@
     
     self.geoLocationLabel.text = [NSString stringWithFormat:@"%f %f", location.longitude, location.latitude];
 }
+
 
 @end
