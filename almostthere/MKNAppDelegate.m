@@ -51,24 +51,8 @@
 
 - (void) initGeoFenceManager
 {
-    CLLocationCoordinate2D coords;
-    //coords.longitude=-0.13370000;
-    //coords.latitude=51.50998000;
-    
-    coords.longitude=8.59578;
-    coords.latitude=50.24003;
-
-    CLLocationDistance radius = 50.0;
-    
-    
-    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:coords
-                                                                 radius:radius
-                                                             identifier:@"Frankfurt"];
-    
-    region.notifyOnEntry = YES;
-    region.notifyOnExit = YES;
-    
-    self.geofenceManager = [[MKNGeoFenceManager alloc] initWithRegion:region];
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    self.geofenceManager = [[MKNGeoFenceManager alloc] initWithLocationManager:locationManager];
 }
 
 - (void) initContactsManager

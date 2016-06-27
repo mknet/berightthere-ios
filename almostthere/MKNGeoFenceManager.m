@@ -44,6 +44,9 @@
 
 - (void)startWatching:(CLRegion *)region {
     
+    region.notifyOnEntry = YES;
+    region.notifyOnExit = YES;
+    
     //to get all results from the location manager
     [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
     
