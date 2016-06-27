@@ -20,6 +20,8 @@
 @implementation MKNGeoFenceManagerTest
 
 id mockManager;
+CLCircularRegion *region;
+
 
 - (void)setUp
 {
@@ -27,6 +29,15 @@ id mockManager;
     
     mockManager = OCMClassMock([CLLocationManager class]);
     self.manager = [[MKNGeoFenceManager alloc] initWithLocationManager:mockManager];
+    
+    CLLocationCoordinate2D coords;
+    coords.longitude=8.783666797422859;
+    coords.latitude=50.0488850458406;
+    
+    CLLocationDistance radius = 500.0;
+    
+    region = [[CLCircularRegion alloc] initWithCenter:coords radius:radius
+                                           identifier:@"XCTRegion"];
 }
 
 - (void)tearDown
@@ -44,35 +55,15 @@ id mockManager;
 
 - (void)testStartWatching
 {
-    CLLocationCoordinate2D coords;
-    coords.longitude=8.783666797422859;
-    coords.latitude=50.0488850458406;
-    
-    CLLocationDistance radius = 500.0;
-    
-    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:coords
-                                                                 radius:radius
-                                                             identifier:@"heusenstamm"];
     [self.manager startWatching:region];
     
-    OCMVerify([mockManager startMonitoringForRegion:[OCMArg any]]);
+    OCMVerify([mockManager startMonitoringForRegion:region]);
     OCMVerify([mockManager setDesiredAccuracy:kCLLocationAccuracyBest]);
 }
 
 - (void)testOnInsideRegion
 {
-    CLLocationCoordinate2D coords;
-    coords.longitude=8.783666797422859;
-    coords.latitude=50.0488850458406;
-    
-    CLLocationDistance radius = 500.0;
-    
-    CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:coords
-                                                                 radius:radius
-                                                             identifier:@"heusenstamm"];
-    
     [self.manager locationManager:mockManager didEnterRegion:region];
-    
     OCMVerify([self.manager onInsideRegion:region]);
 }
 

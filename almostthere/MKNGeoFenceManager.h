@@ -14,7 +14,7 @@
 
 - (id)initWithLocationManager:(CLLocationManager *)manager;
 - (id)initWithRegion:(CLRegion *)region;
-- (void)stopWatching;
+- (void)stopWatching:(CLRegion *)region;
 - (void)startWatching:(CLRegion *)region;
 - (void)onInsideRegion:(CLRegion *)region;
 

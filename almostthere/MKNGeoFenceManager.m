@@ -11,7 +11,6 @@
 @interface MKNGeoFenceManager ()
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
-@property (strong) CLRegion *regionToWatch;
 
 @end
 
@@ -27,7 +26,6 @@
 - (id)initWithRegion:(CLRegion *)region
 {
     self = [self init];
-    self.regionToWatch = region;
     
     self.locationManager = [[CLLocationManager alloc] init];
     
@@ -52,21 +50,21 @@
     //be accurate as possible
     [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
-    //[self.locationManager setPausesLocationUpdatesAutomatically:false];
     self.locationManager.activityType = CLActivityTypeAutomotiveNavigation;
     
-    [self.locationManager startMonitoringForRegion:self.regionToWatch];
+    [self.locationManager startMonitoringForRegion:region];
     
-    [self.locationManager performSelector:@selector(requestStateForRegion:) withObject:self.regionToWatch afterDelay:1];
+    [self.locationManager performSelector:@selector(requestStateForRegion:) withObject:region afterDelay:1];
     
     NSLog(@"Monitored regions %@",self.locationManager.monitoredRegions);
 }
 
-- (void)stopWatching
+- (void)stopWatching:(CLRegion *)region
 {
-    [self.locationManager stopMonitoringForRegion:self.regionToWatch];
-    self.locationManager = nil;
-    self.regionToWatch = nil;
+    [self.locationManager stopMonitoringForRegion:region];
+    if ([self.locationManager.monitoredRegions count] > 0) {
+        self.locationManager = nil;
+    }
 }
 
 - (void)onInsideRegion:(CLRegion *)region
