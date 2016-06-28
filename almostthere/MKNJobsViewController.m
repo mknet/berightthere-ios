@@ -43,8 +43,7 @@
     self.tableView.tableFooterView = [UIView new];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addJob:)];
-    
-    [self.app.geofenceManager startWatching:NULL];
+
     
     [self updateJobList];
 }
