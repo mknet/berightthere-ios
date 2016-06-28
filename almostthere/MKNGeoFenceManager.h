@@ -12,11 +12,12 @@
 
 @interface MKNGeoFenceManager : NSObject <CLLocationManagerDelegate>
 
+typedef void (^insideRegionBlock)(NSString *);
+
 - (id)initWithLocationManager:(CLLocationManager *)manager;
 - (id)initWithRegion:(CLRegion *)region;
 - (void)stopWatching:(CLRegion *)region;
-- (void)startWatching:(CLRegion *)region;
+- (void)startWatching:(CLRegion *)region AndDo: (insideRegionBlock)callback;
 - (void)onInsideRegion:(CLRegion *)region;
 
-//- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region;
 @end

@@ -42,7 +42,7 @@
     return self;
 }
 
-- (void)startWatching:(CLRegion *)region {
+- (void)startWatching:(CLRegion *)region AndDo: (insideRegionBlock)callback {
     
     region.notifyOnEntry = YES;
     region.notifyOnExit = YES;
@@ -60,6 +60,8 @@
     [self.locationManager performSelector:@selector(requestStateForRegion:) withObject:region afterDelay:1];
     
     NSLog(@"Monitored regions %@",self.locationManager.monitoredRegions);
+    
+    callback(@"Block aufgerufen");
 }
 
 - (void)stopWatching:(CLRegion *)region
