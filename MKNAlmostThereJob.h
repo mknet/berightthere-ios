@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import <CoreLocation/CLLocation.h>
+#import <CoreLocation/CLCircularRegion.h>
 
 typedef NS_ENUM(NSInteger, MKNAlmostThereMessageType) {
     MKNAlmostThereMessageTypeMail,
@@ -32,5 +33,7 @@ typedef NS_ENUM(NSInteger, MKNAlmostThereMessageType) {
 
 -(CLLocationCoordinate2D)coordinate;
 -(void)setCoordinate:(CLLocationCoordinate2D)coordinate;
+
+-(CLRegion *)createRegion;
 
 @end
