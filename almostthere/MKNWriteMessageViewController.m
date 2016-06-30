@@ -89,7 +89,8 @@
     if (![app.managedObjectContext save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
-    
+
+
     [app.geofenceManager startWatching:[self.message createRegion]];
     
     [self dismissViewControllerAnimated:true completion:nil];

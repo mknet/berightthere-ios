@@ -12,7 +12,7 @@
 		1F3407461B926850001641AF /* MKNCoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3407451B926850001641AF /* MKNCoreDataTest.m */; };
 		1F6840581B75D00000693607 /* MKNSelectMessageTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6840571B75D00000693607 /* MKNSelectMessageTypeTableViewController.m */; };
 		1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */; };
-		1F8EA0121A03CA0500CA8B70 /* MKNJobsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */; };
+		1F8EA0121A03CA0500CA8B70 /* MKNMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EA0111A03CA0500CA8B70 /* MKNMessageManager.m */; };
 		1F906C3C1B9198280045BCB1 /* MKNAlmostThereJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F906C3B1B9198280045BCB1 /* MKNAlmostThereJob.m */; };
 		1F9878421B8850BE00042F42 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F9878401B8850BE00042F42 /* Model.xcdatamodeld */; };
 		1F9A173D1949885B00606E65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9A173C1949885B00606E65 /* CoreLocation.framework */; };
@@ -64,8 +64,8 @@
 		1F6840571B75D00000693607 /* MKNSelectMessageTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNSelectMessageTypeTableViewController.m; sourceTree = "<group>"; };
 		1F75D32B197C16AC0025EB64 /* MKNWriteMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNWriteMessageViewController.h; sourceTree = "<group>"; };
 		1F75D32C197C16AC0025EB64 /* MKNWriteMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNWriteMessageViewController.m; sourceTree = "<group>"; };
-		1F8EA0101A03CA0500CA8B70 /* MKNJobsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNJobsManager.h; sourceTree = "<group>"; };
-		1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNJobsManager.m; sourceTree = "<group>"; };
+		1F8EA0101A03CA0500CA8B70 /* MKNMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNMessageManager.h; sourceTree = "<group>"; };
+		1F8EA0111A03CA0500CA8B70 /* MKNMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNMessageManager.m; sourceTree = "<group>"; };
 		1F906C3A1B9198280045BCB1 /* MKNAlmostThereJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKNAlmostThereJob.h; path = ../MKNAlmostThereJob.h; sourceTree = "<group>"; };
 		1F906C3B1B9198280045BCB1 /* MKNAlmostThereJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKNAlmostThereJob.m; path = ../MKNAlmostThereJob.m; sourceTree = "<group>"; };
 		1F9878411B8850BE00042F42 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 				1F9A17401949922500606E65 /* MKNGeoFenceManager.m */,
 				1FCEBA6719CAC22B00411A29 /* MKNContactsManager.h */,
 				1FCEBA6819CAC22B00411A29 /* MKNContactsManager.m */,
-				1F8EA0101A03CA0500CA8B70 /* MKNJobsManager.h */,
-				1F8EA0111A03CA0500CA8B70 /* MKNJobsManager.m */,
+				1F8EA0101A03CA0500CA8B70 /* MKNMessageManager.h */,
+				1F8EA0111A03CA0500CA8B70 /* MKNMessageManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 				1FEBFD601B50FBEE00AA4B33 /* MKNFavouritesCollectionViewController.m in Sources */,
 				1FA102721933E69800BB70CB /* MKNAppDelegate.m in Sources */,
 				1FCEBA6919CAC22B00411A29 /* MKNContactsManager.m in Sources */,
-				1F8EA0121A03CA0500CA8B70 /* MKNJobsManager.m in Sources */,
+				1F8EA0121A03CA0500CA8B70 /* MKNMessageManager.m in Sources */,
 				1F9878421B8850BE00042F42 /* Model.xcdatamodeld in Sources */,
 				1F75D32D197C16AC0025EB64 /* MKNWriteMessageViewController.m in Sources */,
 			);

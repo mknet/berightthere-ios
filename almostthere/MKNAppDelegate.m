@@ -14,6 +14,7 @@
 {
     // Override point for customization after application launch.
     
+    [self initMessageManager];
     [self initContactsManager];
     [self initGeoFenceManager];
     
@@ -49,10 +50,22 @@
 
 #pragma mark - MK Geofence Manager
 
+- (void) initMessageManager
+{
+    self.messageManager = [[MKNMessageManager alloc] init];
+    
+}
+
 - (void) initGeoFenceManager
 {
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-    self.geofenceManager = [[MKNGeoFenceManager alloc] initWithLocationManager:locationManager];
+    self.geofenceManager = [[MKNGeoFenceManager alloc] initWithLocationManager:locationManager AndInsideRegionBlock:^(NSString *jobId) {
+        
+        NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+        NSNumber *jobIdNumber = [f numberFromString:jobId];
+        
+        [self.messageManager sendMessageByJobId:jobIdNumber];
+    }];
 }
 
 - (void) initContactsManager

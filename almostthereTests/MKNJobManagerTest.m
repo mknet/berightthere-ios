@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "MKNJobsManager.h"
+#import "MKNMessageManager.h"
 
-@interface MKNJobManagerTest : XCTestCase
+@interface MKNMessageManagerTest : XCTestCase
 
-@property (strong) MKNJobsManager *manager;
+@property (strong) MKNMessageManager *manager;
 
 @end
 
-@implementation MKNJobManagerTest
+@implementation MKNMessageManagerTest
 
 - (void)setUp {
     [super setUp];
-    self.manager = [[MKNJobsManager alloc] init];
+    self.manager = [[MKNMessageManager alloc] init];
 }
 
 - (void)tearDown {
@@ -28,14 +28,9 @@
     [super tearDown];
 }
 
-- (void)testCreattingObject {
-    [self.manager saveJob];
+- (void)testSendingMessage {
+    [self.manager sendMessageByJobId:0];
 }
-
-- (void)testPrintingObject {
-    [self.manager printJobs];
-}
-
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

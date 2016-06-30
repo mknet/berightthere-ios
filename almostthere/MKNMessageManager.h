@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MKNJobsManager : NSObject
+@interface MKNMessageManager : NSObject
 
-- (void)saveJob;
-- (void)printJobs;
+- (void)sendMessageByJobId:(NSNumber * )jobId;
 
 @end

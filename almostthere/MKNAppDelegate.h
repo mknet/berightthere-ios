@@ -11,6 +11,7 @@
 
 #import "MKNContactsManager.h"
 #import "MKNGeoFenceManager.h"
+#import "MKNMessageManager.h"
 
 @interface MKNAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -25,5 +26,6 @@
 
 @property (strong) MKNContactsManager *contactsManager;
 @property (strong) MKNGeoFenceManager *geofenceManager;
+@property (strong) MKNMessageManager *messageManager;
 
 @end

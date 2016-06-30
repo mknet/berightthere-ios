@@ -16,19 +16,12 @@
 
 @implementation MKNGeoFenceManager
 
-- (id)initWithLocationManager:(CLLocationManager *)manager
+insideRegionBlock block;
+
+- (id)initWithLocationManager:(CLLocationManager *)manager AndInsideRegionBlock:(insideRegionBlock)callback
 {
     self = [self init];
     self.locationManager = manager;
-    return self;
-}
-
-- (id)initWithRegion:(CLRegion *)region
-{
-    self = [self init];
-    
-    self.locationManager = [[CLLocationManager alloc] init];
-    
     [self.locationManager requestAlwaysAuthorization];
     
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
@@ -38,11 +31,21 @@
     }
     
     self.locationManager.delegate = self;
+    block = callback;
     
     return self;
 }
 
-- (void)startWatching:(CLRegion *)region AndDo: (insideRegionBlock)callback {
+- (id)initWithRegion:(CLRegion *)region
+{
+    self = [self init];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    
+    return self;
+}
+
+- (void)startWatching:(CLRegion *)region {
     
     region.notifyOnEntry = YES;
     region.notifyOnExit = YES;
@@ -53,6 +56,8 @@
     //be accurate as possible
     [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
+    //[self.locationManager startUpdatingLocation];
+    
     self.locationManager.activityType = CLActivityTypeAutomotiveNavigation;
     
     [self.locationManager startMonitoringForRegion:region];
@@ -60,8 +65,6 @@
     [self.locationManager performSelector:@selector(requestStateForRegion:) withObject:region afterDelay:1];
     
     NSLog(@"Monitored regions %@",self.locationManager.monitoredRegions);
-    
-    callback(@"Block aufgerufen");
 }
 
 - (void)stopWatching:(CLRegion *)region
@@ -74,6 +77,7 @@
 
 - (void)onInsideRegion:(CLRegion *)region
 {
+    block(region.identifier);
     NSLog(@"Du bist gleich in %@", region.identifier);
 }
 

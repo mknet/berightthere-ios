@@ -6,17 +6,13 @@
 //  Copyright (c) 2014 Marcel Koch. All rights reserved.
 //
 
-#import "MKNJobsManager.h"
+#import "MKNMessageManager.h"
 
-@implementation MKNJobsManager
+@implementation MKNMessageManager
 
--(void) saveJob
+- (void)sendMessageByJobId:(NSNumber *)jobId
 {
-}
-
--(void) printJobs
-{
-
+    
 }
 
 @end
