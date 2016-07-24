@@ -1,6 +1,6 @@
 //
 //  MKNAppDelegate.m
-//  almostthere
+//  Be Right There
 //
 //  Created by Marcel Koch on 26.05.14.
 //  Copyright (c) 2014 Marcel Koch. All rights reserved.
